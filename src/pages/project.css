@@ -1,0 +1,88 @@
+/* ---------- Shared ---------- */
+.project-title { padding-inline: var(--margin); padding-top: calc(var(--header-h) + 4px); }
+.project-title h1 { font-size: clamp(32px, 8vw, 40px); line-height: 1.02; margin-top: 4px; }
+.project-title-thread { width: min(260px, 60vw); height: 10px; margin-top: 6px; overflow: visible; }
+
+.facts dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 20px; }
+.facts dt { color: var(--ink-soft); }
+.facts dd { margin: 0; }
+.facts-desc { font-size: 22px; line-height: 1.2; margin-bottom: 18px; max-width: 34ch; }
+
+.video-sound { position: absolute; right: 8px; bottom: 8px; background: var(--paper); padding: 3px 6px; }
+
+/* ---------- Wide (desktop) ---------- */
+.wide-project { height: 100vh; height: 100dvh; overflow: hidden; position: relative; }
+.wide-project .project-title { position: absolute; top: 0; left: 0; z-index: 5; }
+.wide-project .project-title h1 { font-size: clamp(28px, 2.4vw, 40px); }
+.project-counter {
+  position: absolute; right: var(--margin); top: calc(var(--header-h) + 22px); z-index: 5;
+  font-size: 18px; font-variant-numeric: tabular-nums;
+}
+.stage {
+  position: absolute; left: 0; right: 0; top: 150px; bottom: 70px;
+  overflow: hidden;
+}
+.track { position: absolute; inset: 0; }
+.slide {
+  position: absolute; top: 50%; translate: 0 -50%;
+  cursor: pointer;
+}
+.slide.is-active { cursor: default; z-index: 3; }
+.slide picture, .slide .fill-contain { width: 100%; height: 100%; }
+.slide .img { width: 100%; height: 100%; object-fit: contain; }
+
+.zone { position: absolute; top: 0; bottom: 0; width: 50%; z-index: 2; cursor: pointer; }
+.zone:disabled { cursor: default; }
+.zone-prev { left: 0; }
+.zone-next { right: 0; }
+.zone:focus-visible { outline-offset: -8px; }
+/* Let clicks reach the active slide's own video controls. */
+.slide.is-active:has(video) { z-index: 4; }
+
+.end-card { display: flex; align-items: center; z-index: 4; }
+.end-card-link { display: grid; gap: 10px; }
+.end-card-title { font-size: clamp(28px, 2.6vw, 44px); line-height: 1.05; }
+.end-card-thumb { width: 120px; display: block; margin-top: 6px; transition: transform 0.5s var(--ease); }
+.end-card-link:hover .end-card-thumb { transform: rotate(-2deg) translateY(-4px); }
+
+.bottom-bar {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 64px; z-index: 6;
+  align-items: center; font-size: 12px; letter-spacing: 0.06em;
+}
+.bb-left { grid-column: 1 / span 3; justify-self: start; }
+.bb-center { grid-column: 4 / span 6; text-align: center; color: var(--ink-soft); }
+.bb-center strong { color: var(--ink); font-weight: 600; }
+.bb-right { grid-column: 10 / span 3; justify-self: end; }
+.bottom-bar button { color: var(--ink-soft); transition: color 0.3s; }
+.bottom-bar button:hover, .bottom-bar button[aria-expanded="true"] { color: var(--ink); }
+
+.info-panel {
+  position: absolute; left: var(--margin); bottom: 72px; z-index: 7;
+  width: min(380px, 40vw); padding: 20px 22px 18px;
+  background: var(--paper); box-shadow: 0 20px 60px -30px rgba(21, 21, 21, 0.4);
+}
+.info-close { margin-top: 16px; color: var(--ink-soft); }
+
+.view-all {
+  position: fixed; inset: 0; z-index: 50; background: var(--paper);
+  overflow-y: auto; padding: calc(var(--header-h) + 40px) var(--margin) 100px;
+}
+.view-all-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px var(--gutter); align-items: end; }
+@media (min-width: 900px) { .view-all-grid { grid-template-columns: repeat(6, 1fr); gap: 48px calc(var(--gutter) * 2); padding-inline: 4vw; } }
+.view-all-grid button { display: grid; gap: 6px; width: 100%; text-align: left; }
+.view-all-grid button picture { transition: transform 0.5s var(--ease); }
+.view-all-grid button:hover picture { transform: translateY(-4px); }
+.view-all-close { position: fixed; right: var(--margin); bottom: 22px; font-size: 12px; letter-spacing: 0.06em; }
+
+/* ---------- Narrow (mobile / tablet) ---------- */
+.narrow-credit { padding: 10px var(--margin) 0; font-size: 12px; }
+.narrow-list { display: grid; gap: 40px; padding: 32px var(--margin) 0; }
+.narrow-list figure { display: grid; gap: 6px; }
+.narrow-list li:nth-child(3n + 2) figure { padding-left: 14%; }  /* gentle rhythm instead of a flat column */
+.narrow-list li:nth-child(3n) figure { padding-right: 10%; }
+.narrow-facts { padding: 56px var(--margin) 0; }
+.narrow-next { display: grid; gap: 4px; padding: 56px var(--margin) 64px; }
+.narrow-next .serif { font-size: 30px; line-height: 1.05; }
+@media (min-width: 600px) {
+  .narrow-list { padding-inline: 12vw; gap: 64px; }
+}

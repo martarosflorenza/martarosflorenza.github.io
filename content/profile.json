@@ -1,0 +1,51 @@
+{
+  "name": "Marta Ros Florenza",
+  "role": "Fashion stylist",
+  "location": "Paris & Barcelona",
+  "bio": "Marta Ros Florenza is a fashion stylist based between Paris and Barcelona, with a strong interest in image-making and the way clothes can tell a story. Her work moves between editorial and commercial projects, always guided by curiosity, intuition and a personal approach to styling.",
+  "contact": {
+    "email": "martarosflorenza@gmail.com",
+    "phone": "+34 686 74 41 43",
+    "instagram": "martaros____"
+  },
+  "portrait": {
+    "src": "/assets/retrato/retrato-01.jpg",
+    "width": 1012,
+    "height": 1278,
+    "alt": "Portrait of Marta Ros Florenza"
+  },
+  "homeCover": {
+    "src": "/assets/portada/portada-01.jpg",
+    "width": 1920,
+    "height": 1280,
+    "alt": "Flowers frozen in ice",
+    "title": "Frozen Flowers",
+    "credits": [
+      {
+        "role": "photography",
+        "name": "Martina Moreno"
+      }
+    ]
+  },
+  "clients": [
+    "Vanguard Magazine",
+    "Lula Japan",
+    "Sicky Magazine",
+    "Schön!",
+    "Fucking Young",
+    "Loewe",
+    "Adidas",
+    "Casablanca",
+    "Coca-Cola",
+    "Two Jeys",
+    "Good News Coffee",
+    "Leduc"
+  ],
+  "seo": {
+    "title": "Marta Ros Florenza — Fashion stylist",
+    "description": "Portfolio of Marta Ros Florenza, fashion stylist between Paris and Barcelona: editorial, runway and commercial work."
+  },
+  "settings": {
+    "showCredits": true
+  }
+}

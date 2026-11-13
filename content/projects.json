@@ -1,0 +1,1537 @@
+{
+  "_help": "Edit text freely. 'credits' is a list of {role, name}; set showCredits in profile.json to hide them all. Media 'src' points to files in public/assets.",
+  "categories": [
+    {
+      "slug": "editorial",
+      "label": "Editorial"
+    },
+    {
+      "slug": "runway",
+      "label": "Runway"
+    },
+    {
+      "slug": "commercial",
+      "label": "Commercial"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "vanguard",
+      "category": "editorial",
+      "title": "Vanguard Magazine",
+      "client": "Vanguard Magazine",
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "VANGUARD MAGAZINE / 2026",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/vanguard/vanguard-01.jpeg",
+          "width": 1568,
+          "height": 1920,
+          "alt": "Vanguard Magazine, image 1 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vanguard/vanguard-02.jpeg",
+          "width": 1278,
+          "height": 1920,
+          "alt": "Vanguard Magazine, image 2 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vanguard/vanguard-03.jpeg",
+          "width": 1277,
+          "height": 1920,
+          "alt": "Vanguard Magazine, image 3 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vanguard/vanguard-04.jpeg",
+          "width": 1920,
+          "height": 1461,
+          "alt": "Vanguard Magazine, image 4 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vanguard/vanguard-05.jpeg",
+          "width": 1920,
+          "height": 1402,
+          "alt": "Vanguard Magazine, image 5 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vanguard/vanguard-06.jpeg",
+          "width": 1277,
+          "height": 1920,
+          "alt": "Vanguard Magazine, image 6 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vanguard/vanguard-07.jpeg",
+          "width": 1920,
+          "height": 1473,
+          "alt": "Vanguard Magazine, image 7 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vanguard/vanguard-08.jpeg",
+          "width": 1277,
+          "height": 1920,
+          "alt": "Vanguard Magazine, image 8 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vanguard/vanguard-09.jpeg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Vanguard Magazine, image 9 of 9"
+        }
+      ]
+    },
+    {
+      "slug": "lula-japan-2026",
+      "category": "editorial",
+      "title": "Lula Japan",
+      "client": "Lula Japan",
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "FOR LULA JAPAN",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/lula-angelina/lula-angelina-01.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Lula Japan, image 1 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-angelina/lula-angelina-02.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Lula Japan, image 2 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-angelina/lula-angelina-03.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Lula Japan, image 3 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-angelina/lula-angelina-04.jpg",
+          "width": 1357,
+          "height": 1920,
+          "alt": "Lula Japan, image 4 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-angelina/lula-angelina-05.jpg",
+          "width": 1357,
+          "height": 1920,
+          "alt": "Lula Japan, image 5 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-angelina/lula-angelina-06.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Lula Japan, image 6 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-angelina/lula-angelina-07.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Lula Japan, image 7 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-angelina/lula-angelina-08.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Lula Japan, image 8 of 8"
+        }
+      ]
+    },
+    {
+      "slug": "sicky",
+      "category": "editorial",
+      "title": "Sicky Magazine",
+      "client": "Sicky Magazine",
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "FOR SICKY MAGAZINE",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-01.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Sicky Magazine, image 1 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-02.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Sicky Magazine, image 2 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-03.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Sicky Magazine, image 3 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-04.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Sicky Magazine, image 4 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-05.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Sicky Magazine, image 5 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-06.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Sicky Magazine, image 6 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-07.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Sicky Magazine, image 7 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-08.jpg",
+          "width": 1920,
+          "height": 1196,
+          "alt": "Sicky Magazine, image 8 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-09.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Sicky Magazine, image 9 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-10.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Sicky Magazine, image 10 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/sicky/sicky-11.jpg",
+          "width": 1920,
+          "height": 1138,
+          "alt": "Sicky Magazine, image 11 of 11"
+        }
+      ]
+    },
+    {
+      "slug": "schon",
+      "category": "editorial",
+      "title": "Schön!",
+      "client": "Schön! Magazine",
+      "year": 2025,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "FOR SCHON MAGAZINE",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/schou/schou-01.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Schön!, image 1 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/schou/schou-02.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Schön!, image 2 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/schou/schou-03.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Schön!, image 3 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/schou/schou-04.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Schön!, image 4 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/schou/schou-05.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Schön!, image 5 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/schou/schou-06.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Schön!, image 6 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/schou/schou-07.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Schön!, image 7 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/schou/schou-08.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Schön!, image 8 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/schou/schou-09.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Schön!, image 9 of 9"
+        }
+      ]
+    },
+    {
+      "slug": "fucking-young",
+      "category": "editorial",
+      "title": "Fucking Young",
+      "client": "Fucking Young",
+      "year": 2025,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "FOR FUCKING YOUNG",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/fy/fy-01.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Fucking Young, image 1 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/fy/fy-02.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Fucking Young, image 2 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/fy/fy-03.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Fucking Young, image 3 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/fy/fy-04.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Fucking Young, image 4 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/fy/fy-05.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Fucking Young, image 5 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/fy/fy-06.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Fucking Young, image 6 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/fy/fy-07.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Fucking Young, image 7 of 8"
+        },
+        {
+          "type": "image",
+          "src": "/assets/fy/fy-08.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Fucking Young, image 8 of 8"
+        }
+      ]
+    },
+    {
+      "slug": "lula-japan-2025",
+      "category": "editorial",
+      "title": "Lula Japan",
+      "client": "Lula Japan",
+      "year": 2025,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "FOR LULA JAPAN",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-01.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Lula Japan, image 1 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-02.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Lula Japan, image 2 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-03.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Lula Japan, image 3 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-04.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Lula Japan, image 4 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-05.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Lula Japan, image 5 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-06.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Lula Japan, image 6 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-07.webp",
+          "width": 1920,
+          "height": 1071,
+          "alt": "Lula Japan, image 7 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-08.jpg",
+          "width": 1956,
+          "height": 1086,
+          "alt": "Lula Japan, image 8 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-09.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Lula Japan, image 9 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-10.jpg",
+          "width": 1067,
+          "height": 1578,
+          "alt": "Lula Japan, image 10 of 11"
+        },
+        {
+          "type": "image",
+          "src": "/assets/lula-nevada/lula-nevada-11.jpg",
+          "width": 1750,
+          "height": 1054,
+          "alt": "Lula Japan, image 11 of 11"
+        }
+      ]
+    },
+    {
+      "slug": "unsent",
+      "category": "editorial",
+      "title": "Unsent",
+      "client": "Navales",
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "UNSENT / NAVALES",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/jon/jon-01.jpg",
+          "width": 1509,
+          "height": 1920,
+          "alt": "Unsent, image 1 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/jon/jon-02.jpg",
+          "width": 1920,
+          "height": 1508,
+          "alt": "Unsent, image 2 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/jon/jon-03.jpg",
+          "width": 1509,
+          "height": 1920,
+          "alt": "Unsent, image 3 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/jon/jon-04.jpg",
+          "width": 1508,
+          "height": 1920,
+          "alt": "Unsent, image 4 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/jon/jon-05.jpg",
+          "width": 1920,
+          "height": 1509,
+          "alt": "Unsent, image 5 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/jon/jon-06.jpg",
+          "width": 1920,
+          "height": 1508,
+          "alt": "Unsent, image 6 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/jon/jon-07.jpg",
+          "width": 1509,
+          "height": 1920,
+          "alt": "Unsent, image 7 of 7"
+        }
+      ]
+    },
+    {
+      "slug": "veronika",
+      "category": "editorial",
+      "title": "Veronika",
+      "client": "Passion project",
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "VERONIKA / PASSION PROJECT",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/avavav/avavav-01.jpg",
+          "width": 1536,
+          "height": 1920,
+          "alt": "Veronika, image 1 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/avavav/avavav-02.jpg",
+          "width": 1536,
+          "height": 1920,
+          "alt": "Veronika, image 2 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/avavav/avavav-03.jpg",
+          "width": 1536,
+          "height": 1920,
+          "alt": "Veronika, image 3 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/avavav/avavav-04.jpg",
+          "width": 1536,
+          "height": 1920,
+          "alt": "Veronika, image 4 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/avavav/avavav-05.jpg",
+          "width": 1536,
+          "height": 1920,
+          "alt": "Veronika, image 5 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/avavav/avavav-06.jpg",
+          "width": 1536,
+          "height": 1920,
+          "alt": "Veronika, image 6 of 7"
+        },
+        {
+          "type": "image",
+          "src": "/assets/avavav/avavav-07.jpg",
+          "width": 1536,
+          "height": 1920,
+          "alt": "Veronika, image 7 of 7"
+        }
+      ]
+    },
+    {
+      "slug": "xandri-collection",
+      "category": "editorial",
+      "title": "Xandri Collection",
+      "client": null,
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [
+        {
+          "role": "photography",
+          "name": "Aitana del Sol"
+        }
+      ],
+      "caption_original": "XANDRI COLLECTION / BY AITANA DEL SOL",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/mania/mania-01.jpg",
+          "width": 1920,
+          "height": 1281,
+          "alt": "Xandri Collection, image 1 of 6"
+        },
+        {
+          "type": "image",
+          "src": "/assets/mania/mania-02.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Xandri Collection, image 2 of 6"
+        },
+        {
+          "type": "image",
+          "src": "/assets/mania/mania-03.jpg",
+          "width": 1206,
+          "height": 785,
+          "alt": "Xandri Collection, image 3 of 6"
+        },
+        {
+          "type": "image",
+          "src": "/assets/mania/mania-04.jpg",
+          "width": 1190,
+          "height": 1566,
+          "alt": "Xandri Collection, image 4 of 6"
+        },
+        {
+          "type": "image",
+          "src": "/assets/mania/mania-05.jpg",
+          "width": 1280,
+          "height": 1920,
+          "alt": "Xandri Collection, image 5 of 6"
+        },
+        {
+          "type": "image",
+          "src": "/assets/mania/mania-06.jpg",
+          "width": 1920,
+          "height": 1280,
+          "alt": "Xandri Collection, image 6 of 6"
+        }
+      ]
+    },
+    {
+      "slug": "childhood-dream",
+      "category": "editorial",
+      "title": "Childhood Dream",
+      "client": null,
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [
+        {
+          "role": "photography",
+          "name": "Carla Fuster"
+        }
+      ],
+      "caption_original": "CHILDHOOD DREAM / BY CARLA FUSTER",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/rosella/rosella-01.jpg",
+          "width": 853,
+          "height": 1280,
+          "alt": "Childhood Dream, image 1 of 4"
+        },
+        {
+          "type": "image",
+          "src": "/assets/rosella/rosella-02.jpg",
+          "width": 853,
+          "height": 1280,
+          "alt": "Childhood Dream, image 2 of 4"
+        },
+        {
+          "type": "image",
+          "src": "/assets/rosella/rosella-03.jpg",
+          "width": 853,
+          "height": 1280,
+          "alt": "Childhood Dream, image 3 of 4"
+        },
+        {
+          "type": "image",
+          "src": "/assets/rosella/rosella-04.jpg",
+          "width": 1067,
+          "height": 1600,
+          "alt": "Childhood Dream, image 4 of 4"
+        }
+      ]
+    },
+    {
+      "slug": "miguel",
+      "category": "editorial",
+      "title": "Miguel",
+      "client": "Passion project",
+      "year": 2025,
+      "role": "Stylist",
+      "description": "",
+      "credits": [
+        {
+          "role": "photography",
+          "name": "Andrés Bustamante"
+        }
+      ],
+      "caption_original": "MIGUEL BY ANDRÉS BUSTAMANTE / PASSION PROJECT",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/miguel/miguel-01.jpg",
+          "width": 1920,
+          "height": 1536,
+          "alt": "Miguel, image 1 of 5"
+        },
+        {
+          "type": "image",
+          "src": "/assets/miguel/miguel-02.jpg",
+          "width": 1371,
+          "height": 1920,
+          "alt": "Miguel, image 2 of 5"
+        },
+        {
+          "type": "image",
+          "src": "/assets/miguel/miguel-03.jpg",
+          "width": 1372,
+          "height": 1920,
+          "alt": "Miguel, image 3 of 5"
+        },
+        {
+          "type": "image",
+          "src": "/assets/miguel/miguel-04.jpg",
+          "width": 1371,
+          "height": 1920,
+          "alt": "Miguel, image 4 of 5"
+        },
+        {
+          "type": "image",
+          "src": "/assets/miguel/miguel-05.jpg",
+          "width": 1536,
+          "height": 1920,
+          "alt": "Miguel, image 5 of 5"
+        }
+      ]
+    },
+    {
+      "slug": "dont-call-me-again",
+      "category": "editorial",
+      "title": "Don't Call Me Again",
+      "client": null,
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [
+        {
+          "role": "selection",
+          "name": "London Fashion Film Festival"
+        }
+      ],
+      "caption_original": "SELECTED AS PART OF THE LONDON FASHION FILM FESTIVAL OFFICIAL SELECTION",
+      "media": [
+        {
+          "type": "video",
+          "src": "/assets/ft/ft-01.mp4",
+          "width": 1024,
+          "height": 618,
+          "alt": "Don't Call Me Again, video",
+          "duration": 120.0
+        }
+      ]
+    },
+    {
+      "slug": "leduc-080",
+      "category": "runway",
+      "title": "Leduc — Sons of Tailoring",
+      "client": "Leduc",
+      "year": 2024,
+      "role": "Stylist",
+      "description": "",
+      "credits": [
+        {
+          "role": "show",
+          "name": "080 Barcelona Fashion"
+        }
+      ],
+      "caption_original": "LEDUC - SONS OF TAILORING - 080 BARCELONA",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/runway/runway-01.jpg",
+          "width": 1206,
+          "height": 1487,
+          "alt": "Leduc — Sons of Tailoring, image 1 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/runway/runway-02.jpg",
+          "width": 1206,
+          "height": 1482,
+          "alt": "Leduc — Sons of Tailoring, image 2 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/runway/runway-03.jpg",
+          "width": 1206,
+          "height": 1488,
+          "alt": "Leduc — Sons of Tailoring, image 3 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/runway/runway-04.jpg",
+          "width": 1206,
+          "height": 1487,
+          "alt": "Leduc — Sons of Tailoring, image 4 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/runway/runway-05.jpg",
+          "width": 1206,
+          "height": 1477,
+          "alt": "Leduc — Sons of Tailoring, image 5 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/runway/runway-06.jpg",
+          "width": 1206,
+          "height": 1488,
+          "alt": "Leduc — Sons of Tailoring, image 6 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/runway/runway-07.jpg",
+          "width": 1206,
+          "height": 1469,
+          "alt": "Leduc — Sons of Tailoring, image 7 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/runway/runway-08.jpg",
+          "width": 1206,
+          "height": 1472,
+          "alt": "Leduc — Sons of Tailoring, image 8 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/runway/runway-09.jpg",
+          "width": 1206,
+          "height": 1483,
+          "alt": "Leduc — Sons of Tailoring, image 9 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/runway/runway-10.jpg",
+          "width": 1206,
+          "height": 1478,
+          "alt": "Leduc — Sons of Tailoring, image 10 of 10"
+        }
+      ]
+    },
+    {
+      "slug": "pellizco",
+      "category": "runway",
+      "title": "Pellizco",
+      "client": "Maria Arnal",
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [
+        {
+          "role": "music video",
+          "name": "Maria Arnal"
+        }
+      ],
+      "caption_original": "PELLIZCO - MARIA ARNAL",
+      "media": [
+        {
+          "type": "video",
+          "src": "/assets/vicaclip/vicaclip-01.mp4",
+          "width": 720,
+          "height": 332,
+          "alt": "Pellizco, video",
+          "duration": 155.8
+        }
+      ]
+    },
+    {
+      "slug": "good-news-coffee",
+      "category": "commercial",
+      "title": "Good News Coffee",
+      "client": "Good News Coffee",
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "GOOD NEWS COFFEE / 2026",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/good-news/good-news-01.jpg",
+          "width": 1171,
+          "height": 1492,
+          "alt": "Good News Coffee, image 1 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/good-news/good-news-02.jpg",
+          "width": 1199,
+          "height": 1496,
+          "alt": "Good News Coffee, image 2 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/good-news/good-news-03.jpg",
+          "width": 1192,
+          "height": 1490,
+          "alt": "Good News Coffee, image 3 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/good-news/good-news-04.jpg",
+          "width": 1206,
+          "height": 1582,
+          "alt": "Good News Coffee, image 4 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/good-news/good-news-05.jpg",
+          "width": 1206,
+          "height": 1590,
+          "alt": "Good News Coffee, image 5 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/good-news/good-news-06.jpg",
+          "width": 1177,
+          "height": 1590,
+          "alt": "Good News Coffee, image 6 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/good-news/good-news-07.jpg",
+          "width": 1206,
+          "height": 1654,
+          "alt": "Good News Coffee, image 7 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/good-news/good-news-08.jpg",
+          "width": 1206,
+          "height": 1487,
+          "alt": "Good News Coffee, image 8 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/good-news/good-news-09.jpg",
+          "width": 3830,
+          "height": 5106,
+          "alt": "Good News Coffee, image 9 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/good-news/good-news-10.jpg",
+          "width": 2631,
+          "height": 3508,
+          "alt": "Good News Coffee, image 10 of 10"
+        }
+      ]
+    },
+    {
+      "slug": "two-jeys-media",
+      "category": "commercial",
+      "title": "Two Jeys — Media Shoots",
+      "client": "Two Jeys",
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "TWO JEYS - MEDIA SHOOTS / 2026",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-01.jpg",
+          "width": 1206,
+          "height": 1587,
+          "alt": "Two Jeys — Media Shoots, image 1 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-02.jpg",
+          "width": 1082,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 2 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-03.jpg",
+          "width": 1082,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 3 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-04.jpg",
+          "width": 1206,
+          "height": 824,
+          "alt": "Two Jeys — Media Shoots, image 4 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-05.jpg",
+          "width": 1440,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 5 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-06.jpg",
+          "width": 1082,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 6 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-07.jpg",
+          "width": 1082,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 7 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-08.jpg",
+          "width": 1206,
+          "height": 797,
+          "alt": "Two Jeys — Media Shoots, image 8 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-09.jpg",
+          "width": 1440,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 9 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-10.jpg",
+          "width": 1082,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 10 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-11.jpg",
+          "width": 1440,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 11 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-12.jpg",
+          "width": 1440,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 12 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-13.jpg",
+          "width": 1206,
+          "height": 793,
+          "alt": "Two Jeys — Media Shoots, image 13 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-14.jpg",
+          "width": 1082,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 14 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-15.jpg",
+          "width": 1440,
+          "height": 1920,
+          "alt": "Two Jeys — Media Shoots, image 15 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-16.jpg",
+          "width": 1206,
+          "height": 805,
+          "alt": "Two Jeys — Media Shoots, image 16 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-17.jpg",
+          "width": 1920,
+          "height": 1082,
+          "alt": "Two Jeys — Media Shoots, image 17 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-18.jpg",
+          "width": 1206,
+          "height": 803,
+          "alt": "Two Jeys — Media Shoots, image 18 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-19.jpg",
+          "width": 1206,
+          "height": 797,
+          "alt": "Two Jeys — Media Shoots, image 19 of 20"
+        },
+        {
+          "type": "image",
+          "src": "/assets/twojeys/twojeys-20.jpg",
+          "width": 1206,
+          "height": 798,
+          "alt": "Two Jeys — Media Shoots, image 20 of 20"
+        }
+      ]
+    },
+    {
+      "slug": "two-jeys-ecommerce",
+      "category": "commercial",
+      "title": "Two Jeys — E-commerce",
+      "client": "Two Jeys",
+      "year": 2026,
+      "role": "Stylist",
+      "description": "",
+      "credits": [],
+      "caption_original": "TWO JEYS - E COMMERCE / 2026",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/ecom-twojeys/ecom-twojeys-01.png",
+          "width": 790,
+          "height": 1004,
+          "alt": "Two Jeys — E-commerce, image 1 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-twojeys/ecom-twojeys-02.png",
+          "width": 788,
+          "height": 998,
+          "alt": "Two Jeys — E-commerce, image 2 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-twojeys/ecom-twojeys-03.png",
+          "width": 794,
+          "height": 998,
+          "alt": "Two Jeys — E-commerce, image 3 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-twojeys/ecom-twojeys-04.png",
+          "width": 790,
+          "height": 998,
+          "alt": "Two Jeys — E-commerce, image 4 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-twojeys/ecom-twojeys-05.png",
+          "width": 786,
+          "height": 990,
+          "alt": "Two Jeys — E-commerce, image 5 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-twojeys/ecom-twojeys-06.png",
+          "width": 764,
+          "height": 990,
+          "alt": "Two Jeys — E-commerce, image 6 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-twojeys/ecom-twojeys-07.png",
+          "width": 786,
+          "height": 996,
+          "alt": "Two Jeys — E-commerce, image 7 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-twojeys/ecom-twojeys-08.png",
+          "width": 780,
+          "height": 984,
+          "alt": "Two Jeys — E-commerce, image 8 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-twojeys/ecom-twojeys-09.png",
+          "width": 786,
+          "height": 988,
+          "alt": "Two Jeys — E-commerce, image 9 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-twojeys/ecom-twojeys-10.png",
+          "width": 776,
+          "height": 986,
+          "alt": "Two Jeys — E-commerce, image 10 of 10"
+        }
+      ]
+    },
+    {
+      "slug": "casablanca-ss25",
+      "category": "commercial",
+      "title": "Casablanca — E-commerce SS25",
+      "client": "Casablanca",
+      "year": 2025,
+      "role": "Style assistant",
+      "description": "",
+      "credits": [],
+      "caption_original": "CASABLANCA - E COMMERCE SS25",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/ecom-casablanca/ecom-casablanca-01.webp",
+          "width": 1296,
+          "height": 1520,
+          "alt": "Casablanca — E-commerce SS25, image 1 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-casablanca/ecom-casablanca-02.png",
+          "width": 1190,
+          "height": 1554,
+          "alt": "Casablanca — E-commerce SS25, image 2 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-casablanca/ecom-casablanca-03.png",
+          "width": 1318,
+          "height": 1560,
+          "alt": "Casablanca — E-commerce SS25, image 3 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-casablanca/ecom-casablanca-04.png",
+          "width": 1616,
+          "height": 1554,
+          "alt": "Casablanca — E-commerce SS25, image 4 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-casablanca/ecom-casablanca-05.png",
+          "width": 1194,
+          "height": 1532,
+          "alt": "Casablanca — E-commerce SS25, image 5 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-casablanca/ecom-casablanca-06.png",
+          "width": 1326,
+          "height": 1552,
+          "alt": "Casablanca — E-commerce SS25, image 6 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-casablanca/ecom-casablanca-07.png",
+          "width": 1400,
+          "height": 1548,
+          "alt": "Casablanca — E-commerce SS25, image 7 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-casablanca/ecom-casablanca-08.webp",
+          "width": 1208,
+          "height": 1516,
+          "alt": "Casablanca — E-commerce SS25, image 8 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-casablanca/ecom-casablanca-09.png",
+          "width": 1130,
+          "height": 1556,
+          "alt": "Casablanca — E-commerce SS25, image 9 of 10"
+        },
+        {
+          "type": "image",
+          "src": "/assets/ecom-casablanca/ecom-casablanca-10.png",
+          "width": 864,
+          "height": 1080,
+          "alt": "Casablanca — E-commerce SS25, image 10 of 10"
+        }
+      ]
+    },
+    {
+      "slug": "mam-originals",
+      "category": "commercial",
+      "title": "MAM Originals",
+      "client": "MAM Originals",
+      "year": 2026,
+      "role": "Style assistant",
+      "description": "",
+      "credits": [],
+      "caption_original": "MAM ORIGINALS",
+      "media": [
+        {
+          "type": "video",
+          "src": "/assets/warm/warm-01.mp4",
+          "width": 652,
+          "height": 1280,
+          "alt": "MAM Originals, video",
+          "duration": 13.3
+        },
+        {
+          "type": "video",
+          "src": "/assets/warm/warm-02.mp4",
+          "width": 650,
+          "height": 1280,
+          "alt": "MAM Originals, video",
+          "duration": 19.4
+        },
+        {
+          "type": "video",
+          "src": "/assets/warm/warm-03.mp4",
+          "width": 662,
+          "height": 1280,
+          "alt": "MAM Originals, video",
+          "duration": 5.8
+        },
+        {
+          "type": "video",
+          "src": "/assets/warm/warm-04.mp4",
+          "width": 650,
+          "height": 1280,
+          "alt": "MAM Originals, video",
+          "duration": 27.9
+        }
+      ]
+    },
+    {
+      "slug": "adidas",
+      "category": "commercial",
+      "title": "Adidas",
+      "client": "Adidas",
+      "year": 2026,
+      "role": "Style assistant",
+      "description": "",
+      "credits": [],
+      "caption_original": "ADIDAS",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/balon-dor/balon-dor-01.jpg",
+          "width": 1206,
+          "height": 1583,
+          "alt": "Adidas, image 1 of 6"
+        },
+        {
+          "type": "image",
+          "src": "/assets/balon-dor/balon-dor-02.jpg",
+          "width": 1206,
+          "height": 1595,
+          "alt": "Adidas, image 2 of 6"
+        },
+        {
+          "type": "image",
+          "src": "/assets/balon-dor/balon-dor-03.jpg",
+          "width": 1206,
+          "height": 1593,
+          "alt": "Adidas, image 3 of 6"
+        },
+        {
+          "type": "image",
+          "src": "/assets/balon-dor/balon-dor-04.jpg",
+          "width": 1206,
+          "height": 1577,
+          "alt": "Adidas, image 4 of 6"
+        },
+        {
+          "type": "image",
+          "src": "/assets/balon-dor/balon-dor-05.jpg",
+          "width": 1206,
+          "height": 1599,
+          "alt": "Adidas, image 5 of 6"
+        },
+        {
+          "type": "image",
+          "src": "/assets/balon-dor/balon-dor-06.jpg",
+          "width": 1206,
+          "height": 1604,
+          "alt": "Adidas, image 6 of 6"
+        }
+      ]
+    },
+    {
+      "slug": "adidas-backyard-legends",
+      "category": "commercial",
+      "title": "Adidas Backyard Legends — World Cup 2026",
+      "client": "Adidas",
+      "year": 2026,
+      "role": "Style assistant",
+      "description": "",
+      "credits": [],
+      "caption_original": "ADIDAS BACKYARD LEGENDS WORLD CUP 2026",
+      "media": [
+        {
+          "type": "video",
+          "src": "/assets/world-cup/world-cup-01.mp4",
+          "width": 1024,
+          "height": 470,
+          "alt": "Adidas Backyard Legends — World Cup 2026, video",
+          "duration": 301.2
+        }
+      ]
+    },
+    {
+      "slug": "loewe-ss26",
+      "category": "commercial",
+      "title": "Loewe SS26",
+      "client": "Loewe",
+      "year": 2026,
+      "role": "Style assistant",
+      "description": "",
+      "credits": [
+        {
+          "role": "photography",
+          "name": "Talia Chetrit"
+        }
+      ],
+      "caption_original": "LOEWE SS26 BY TALIA CHETRIT",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/loewe/loewe-01.jpg",
+          "width": 1206,
+          "height": 1482,
+          "alt": "Loewe SS26, image 1 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/loewe/loewe-02.jpg",
+          "width": 1206,
+          "height": 1478,
+          "alt": "Loewe SS26, image 2 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/loewe/loewe-03.jpg",
+          "width": 1206,
+          "height": 1490,
+          "alt": "Loewe SS26, image 3 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/loewe/loewe-04.jpg",
+          "width": 1206,
+          "height": 1487,
+          "alt": "Loewe SS26, image 4 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/loewe/loewe-05.jpg",
+          "width": 1206,
+          "height": 1490,
+          "alt": "Loewe SS26, image 5 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/loewe/loewe-06.jpg",
+          "width": 1206,
+          "height": 1480,
+          "alt": "Loewe SS26, image 6 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/loewe/loewe-07.jpg",
+          "width": 1206,
+          "height": 1485,
+          "alt": "Loewe SS26, image 7 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/loewe/loewe-08.jpg",
+          "width": 1206,
+          "height": 1499,
+          "alt": "Loewe SS26, image 8 of 9"
+        },
+        {
+          "type": "image",
+          "src": "/assets/loewe/loewe-09.jpg",
+          "width": 1206,
+          "height": 1480,
+          "alt": "Loewe SS26, image 9 of 9"
+        }
+      ]
+    },
+    {
+      "slug": "coca-cola-holiday",
+      "category": "commercial",
+      "title": "Coca-Cola — A Holiday Memory",
+      "client": "Coca-Cola",
+      "year": 2025,
+      "role": "Wardrobe assistant",
+      "description": "",
+      "credits": [],
+      "caption_original": "COCA-COLA - A HOLIDAY MEMORY / 2025",
+      "media": [
+        {
+          "type": "video",
+          "src": "/assets/cocacola/cocacola-01.mp4",
+          "width": 1424,
+          "height": 656,
+          "alt": "Coca-Cola — A Holiday Memory, video",
+          "duration": 13.5
+        }
+      ]
+    }
+  ]
+}

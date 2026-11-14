@@ -14,21 +14,11 @@ export function Home() {
   return (
     <Page title={profile.seo.title}>
       <section className="hero grid" aria-labelledby="intro">
-        <div className="hero-intro">
-          <motion.h1
-            id="intro"
-            className="serif hero-title"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.5 }}
-          >
-            Fashion stylist, <em>between</em> {profile.location.toLowerCase().replace("&", "and")}.
-          </motion.h1>
-          <p className="hero-sub soft">editorial · runway · commercial</p>
-        </div>
+        {/* No visible headline: the cover photo leads. The heading stays for screen readers. */}
+        <h1 id="intro" className="sr-only">{profile.name}, {profile.role.toLowerCase()} based in {profile.location}</h1>
 
         <figure className="hero-cover">
-          <Img src={cover.src} alt={cover.alt} sizes="(min-width: 768px) 40vw, 92vw" priority />
+          <Img src={cover.src} alt={cover.alt} sizes="(min-width: 768px) 66vw, 100vw" priority />
           <figcaption className="small soft hero-caption">
             <span style={{ fontSize: 13, color: "var(--ink)" }}>{cover.title}</span>
             {profile.settings.showCredits && cover.credits.map((c) => (

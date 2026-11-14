@@ -11,6 +11,8 @@
 .info-clients p { font-size: 22px; line-height: 1.25; max-width: 30ch; }
 .info-portrait { width: 44%; max-width: 220px; }
 .info-artwork { grid-column: 1 / span 12; }
+/* Shown in black and white; remove this filter to bring the colour back. */
+.info-artwork picture, .info-artwork img { filter: grayscale(1); }
 
 @media (min-width: 900px) {
   .info { padding-top: calc(var(--header-h) + 12vh); }

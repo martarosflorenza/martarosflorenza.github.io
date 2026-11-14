@@ -36,6 +36,8 @@ export type Profile = {
   bio: string;
   contact: { email: string; phone: string; instagram: string };
   portrait: { src: string; width: number; height: number; alt: string };
+  /** Artwork shown on the info page (optional). */
+  infoArtwork?: { src: string; width: number; height: number; alt: string };
   homeCover: { src: string; width: number; height: number; alt: string; title: string; credits: Credit[] };
   clients: string[];
   seo: { title: string; description: string };

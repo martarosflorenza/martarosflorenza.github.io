@@ -1,6 +1,6 @@
 .work { padding-top: calc(var(--header-h) + 6vh); padding-bottom: 14vh; }
 .work-head { row-gap: 18px; align-items: end; margin-bottom: 6vh; }
-.work-title { grid-column: 1 / span 12; font-size: clamp(40px, 10vw, 56px); line-height: 1; font-style: italic; }
+.work-title { grid-column: 1 / span 12; font-size: clamp(40px, 10vw, 56px); line-height: 1; }
 .work-filters { grid-column: 1 / span 12; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12px; letter-spacing: 0.06em; }
 .work-filter { position: relative; color: var(--ink-soft); padding-block: 6px; transition: color 0.3s; }
 .work-filter[aria-pressed="true"], .work-filter:hover { color: var(--ink); }
@@ -31,5 +31,4 @@
   .work-item:nth-child(5n + 5) { grid-column: 7 / span 5; margin-top: 8vh; }
   .work-card-title { font-size: clamp(22px, 1.8vw, 30px); }
   .work-card:hover .work-card-img .img { transform: scale(1.025); }
-  .work-card:hover .work-card-title { font-style: italic; }
 }

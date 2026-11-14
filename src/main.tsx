@@ -3,9 +3,6 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, MemoryRouter } from "react-router-dom";
 import { IS_PREVIEW_BUILD } from "./lib/paths";
 import { HashSync, initialPreviewPath } from "./lib/HashSync";
-import "@fontsource/instrument-serif/400.css";
-import "@fontsource/instrument-serif/400-italic.css";
-import "@fontsource-variable/inter-tight";
 import "./styles/global.css";
 import { App } from "./App";
 

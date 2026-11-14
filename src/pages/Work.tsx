@@ -47,7 +47,7 @@ export function Work() {
               return (
                 <Reveal as="li" key={p.slug} className="work-item" delay={(i % 3) * 0.08}>
                   <Link to={`/work/${p.slug}`} className="work-card">
-                    <span className="work-card-img" data-cursor="hide">
+                    <span className="work-card-img">
                       <Img src={cover.src} alt="" sizes="(min-width: 900px) 33vw, 50vw" />
                     </span>
                     <span className="work-card-meta">

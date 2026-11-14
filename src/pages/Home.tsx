@@ -34,7 +34,7 @@ export function Home() {
           <p className="hero-sub soft">editorial · runway · commercial</p>
         </div>
 
-        <figure className="hero-cover" data-cursor="hide">
+        <figure className="hero-cover">
           <Img src={cover.src} alt={cover.alt} sizes="(min-width: 768px) 40vw, 92vw" priority />
           <figcaption className="small soft hero-caption">
             <span className="italic serif" style={{ fontSize: 14, letterSpacing: 0 }}>{cover.title}</span>

@@ -14,6 +14,12 @@
     "height": 1278,
     "alt": "Portrait of Marta Ros Florenza"
   },
+  "infoArtwork": {
+    "src": "/assets/info/artwork-01.webp",
+    "width": 1800,
+    "height": 1798,
+    "alt": "Collage in magenta, blue, yellow and green: screen-printed hands, stars and fragments of faces"
+  },
   "homeCover": {
     "src": "/assets/portada/portada-01.jpg",
     "width": 1920,

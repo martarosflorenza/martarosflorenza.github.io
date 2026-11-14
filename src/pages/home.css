@@ -8,7 +8,6 @@
 }
 .hero-intro { grid-column: 1 / span 12; align-self: start; z-index: 2; }
 .hero-title { font-size: clamp(34px, 9vw, 44px); line-height: 1.02; max-width: 12ch; }
-.hero-title em { font-style: italic; }
 .hero-sub { margin-top: 14px; letter-spacing: 0.06em; }
 .hero-cover { grid-column: 2 / span 10; position: relative; z-index: 2; background: var(--paper); }
 .hero-caption { margin-top: 8px; text-align: right; }
@@ -62,7 +61,7 @@
   .index-title { grid-column: 2 / span 6; font-size: clamp(24px, 2.4vw, 36px); transition: transform 0.45s var(--ease); }
   .index-cat { grid-column: 8 / span 2; margin: 0; }
   .index-year { grid-column: 12 / span 1; }
-  .index-row:hover .index-title, .index-row:focus-visible .index-title { transform: translateX(10px); font-style: italic; }
+  .index-row:hover .index-title, .index-row:focus-visible .index-title { transform: translateX(10px); }
   .index-list.has-hover .index-row:not(.is-active) { opacity: 0.32; }
 
   .index-preview {

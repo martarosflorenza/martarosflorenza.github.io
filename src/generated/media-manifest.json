@@ -627,6 +627,19 @@
   ],
   "lqip": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoQABUAPu1iqU2ppaQiMAgBMB2JbACdMoN8AAWmVlr3VnQ/+XrgAP7gpiRlrHveNXI/Qj/aRzDUd00AvNP82937kp7msvrIQ7Rku79sfCM+Y6xQ3s8rt/DKQ+ObStt4kUvOBSeouMAyaQUFcxY/MU4l8P37X2s8cUuDBxhU0+gUhPySNAAAAA=="
  },
+ "/assets/info/artwork-01.webp": {
+  "type": "image",
+  "base": "/img/info/artwork-01",
+  "width": 1800,
+  "height": 1798,
+  "widths": [
+   480,
+   960,
+   1600,
+   1800
+  ],
+  "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQABAAA4BaJbAC7AC9og7m6AD+xgTBE3kxLtWAuglVDSmNxHV1i8Lb3pW6vSMCpd9BXlSIGAfjX0iiUIjdnx9t4UXzE3NDh2QAAA=="
+ },
  "/assets/jon/jon-01.jpg": {
   "type": "image",
   "base": "/img/jon/jon-01",

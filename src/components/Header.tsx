@@ -10,11 +10,10 @@ const NAV = [
 
 export function Header() {
   const { pathname } = useLocation();
-  const [first, ...rest] = profile.name.split(" ");
   return (
     <header className="site-header">
       <Link to="/" className="wordmark" aria-label={`${profile.name}, home`}>
-        {first} <em>{rest.join(" ")}</em>
+        {profile.name}
       </Link>
       <nav aria-label="Main">
         <ul className="site-nav">

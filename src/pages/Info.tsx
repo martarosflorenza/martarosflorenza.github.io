@@ -4,7 +4,6 @@ import { Page } from "../components/PageTransition";
 import { Img } from "../components/Img";
 import { Reveal } from "../components/Reveal";
 import { Footer } from "../components/Footer";
-import { DressForm } from "../components/doodles/Doodles";
 import "./info.css";
 
 export function Info() {
@@ -41,9 +40,11 @@ export function Info() {
           </Reveal>
         </div>
 
-        <div className="info-drawing">
-          <DressForm className="info-form" />
-        </div>
+        {profile.infoArtwork && (
+          <Reveal className="info-artwork">
+            <Img src={profile.infoArtwork.src} alt={profile.infoArtwork.alt} sizes="(min-width: 900px) 40vw, 100vw" />
+          </Reveal>
+        )}
       </div>
       <Footer />
     </Page>

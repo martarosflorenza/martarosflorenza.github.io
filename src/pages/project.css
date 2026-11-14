@@ -86,3 +86,19 @@
 @media (min-width: 600px) {
   .narrow-list { padding-inline: 12vw; gap: 64px; }
 }
+
+/* Quiet arrows on the click zones, shown only on hover or keyboard focus. */
+.zone { display: flex; align-items: center; padding-inline: 20px; }
+.zone-prev { justify-content: flex-start; }
+.zone-next { justify-content: flex-end; }
+.zone-arrow {
+  font-size: 18px; font-weight: 300; line-height: 1; color: var(--ink);
+  text-shadow: 0 0 3px var(--paper), 0 0 6px var(--paper);
+  opacity: 0; transition: opacity 0.2s, transform 0.3s var(--ease);
+}
+@media (hover: hover) {
+  .zone:not(:disabled):hover .zone-arrow { opacity: 0.8; }
+  .zone-prev:not(:disabled):hover .zone-arrow { transform: translateX(-3px); }
+  .zone-next:hover .zone-arrow { transform: translateX(3px); }
+}
+.zone:focus-visible .zone-arrow { opacity: 0.8; }

@@ -7,7 +7,6 @@ import { Img } from "../components/Img";
 import { Video } from "../components/Video";
 import { Reveal } from "../components/Reveal";
 import { Footer } from "../components/Footer";
-import { useCursor } from "../components/Cursor";
 import { Draw } from "../components/doodles/Draw";
 import { useMediaQuery, useViewport } from "../lib/hooks";
 import { NotFound } from "./NotFound";
@@ -47,7 +46,6 @@ function WideProject({ project }: { project: ProjectT }) {
   const media = project.media;
   const { next } = neighbours(project.slug);
   const navigate = useNavigate();
-  const { setLabel } = useCursor();
   const { w: vw, h: vh } = useViewport();
   const [index, setIndex] = useState(0);
   const [panel, setPanel] = useState<"info" | "all" | null>(null);
@@ -129,8 +127,6 @@ function WideProject({ project }: { project: ProjectT }) {
     };
   }, [go]);
 
-  useEffect(() => () => setLabel(null), [setLabel]);
-
   const atEnd = index === endIndex;
   const isVideoActive = media[index]?.type === "video";
 
@@ -145,7 +141,7 @@ function WideProject({ project }: { project: ProjectT }) {
         {atEnd ? `End of ${project.title}. Next project: ${next.title}.` : `Image ${index + 1} of ${media.length}`}
       </p>
 
-      <div className="stage" ref={stageRef} data-cursor="hide">
+      <div className="stage" ref={stageRef}>
         <motion.div className="track" animate={{ x }} initial={false} transition={{ duration: 0.85, ease: EASE }}>
           {media.map((m, i) => (
             <Slide key={m.src} media={m} box={layout.slides[i]} active={i === index} near={Math.abs(i - index) <= 2} onSelect={() => setIndex(i)} />
@@ -167,17 +163,17 @@ function WideProject({ project }: { project: ProjectT }) {
           aria-label="Previous image"
           disabled={index === 0}
           onClick={() => go(-1)}
-          onPointerEnter={() => index > 0 && setLabel("← prev")}
-          onPointerLeave={() => setLabel(null)}
-        />
+        >
+          <span className="zone-arrow" aria-hidden="true">←</span>
+        </button>
         <button
           className="zone zone-next"
           aria-label={atEnd ? `Next project: ${next.title}` : "Next image"}
           onClick={() => go(1)}
-          onPointerEnter={() => setLabel(atEnd ? "next project →" : "next →")}
-          onPointerLeave={() => setLabel(null)}
           style={isVideoActive ? { width: "25%" } : undefined}
-        />
+        >
+          <span className="zone-arrow" aria-hidden="true">{atEnd ? "next project →" : "→"}</span>
+        </button>
       </div>
 
       <div className="bottom-bar grid">

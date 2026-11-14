@@ -34,10 +34,6 @@ export function Info() {
             <h2 className="small soft">selected clients</h2>
             <p className="serif">{profile.clients.join(", ")}.</p>
           </Reveal>
-
-          <Reveal className="info-portrait">
-            <Img src={profile.portrait.src} alt={profile.portrait.alt} sizes="(min-width: 900px) 14vw, 40vw" />
-          </Reveal>
         </div>
 
         {profile.infoArtwork && (

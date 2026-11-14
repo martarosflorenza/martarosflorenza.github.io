@@ -9,7 +9,6 @@
 .copy-btn { letter-spacing: 0.04em; }
 .copy-btn:hover { color: var(--ink); }
 .info-clients p { font-size: 22px; line-height: 1.25; max-width: 30ch; }
-.info-portrait { width: 44%; max-width: 220px; }
 .info-artwork { grid-column: 1 / span 12; }
 /* Shown in black and white; remove this filter to bring the colour back. */
 .info-artwork picture, .info-artwork img { filter: grayscale(1); }
@@ -21,7 +20,6 @@
   .info-lead { font-size: clamp(34px, 3vw, 48px); }
   .info-body { padding-left: 28%; }
   .info-block { padding-left: 28%; }
-  .info-portrait { width: 30%; margin-left: 0; }
   .info-artwork {
     position: sticky; top: calc(var(--header-h) + 4vh); align-self: start;
     grid-column: 8 / span 5;

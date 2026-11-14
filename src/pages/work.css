@@ -4,8 +4,8 @@
 .work-filters { grid-column: 1 / span 12; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12px; letter-spacing: 0.06em; }
 .work-filter { position: relative; color: var(--ink-soft); padding-block: 6px; transition: color 0.3s; }
 .work-filter[aria-pressed="true"], .work-filter:hover { color: var(--ink); }
-.work-filter .count { font-size: 14px; letter-spacing: 0; }
-.work-filter-loop { position: absolute; left: -4px; right: -4px; bottom: -4px; width: calc(100% + 8px); height: 10px; }
+.work-filter .count { color: var(--ink-faint); }
+.work-filter[aria-pressed="true"] .bracket { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 /* Mobile: two staggered columns */
 .work-grid { row-gap: 40px; align-items: start; }

@@ -6,7 +6,6 @@ import { Page } from "../components/PageTransition";
 import { Img } from "../components/Img";
 import { Reveal } from "../components/Reveal";
 import { Footer } from "../components/Footer";
-import { ThreadLoop } from "../components/doodles/Doodles";
 import "./work.css";
 
 export function Work() {
@@ -25,8 +24,7 @@ export function Work() {
             {filters.map((f) => (
               <li key={f.slug}>
                 <button onClick={() => setFilter(f.slug)} aria-pressed={filter === f.slug} className="work-filter">
-                  <span className="bracket">{f.label}</span> <span className="serif italic count">{f.count}</span>
-                  {filter === f.slug && <ThreadLoop className="work-filter-loop" inView={false} key={f.slug} />}
+                  <span className="bracket">{f.label}</span> <span className="count">{f.count}</span>
                 </button>
               </li>
             ))}

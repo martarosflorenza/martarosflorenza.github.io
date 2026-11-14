@@ -7,7 +7,6 @@ import { Img } from "../components/Img";
 import { Video } from "../components/Video";
 import { Reveal } from "../components/Reveal";
 import { Footer } from "../components/Footer";
-import { Draw } from "../components/doodles/Draw";
 import { useMediaQuery, useViewport } from "../lib/hooks";
 import { NotFound } from "./NotFound";
 import "./project.css";
@@ -33,9 +32,6 @@ function TitleBlock({ project }: { project: ProjectT }) {
         {categoryLabel(project.category).toLowerCase()} — {project.year}
       </p>
       <h1 className="serif">{project.title}</h1>
-      <svg className="project-title-thread" viewBox="0 0 300 12" aria-hidden="true">
-        <Draw d="M2 8 C 60 4, 120 10, 180 6 C 220 3, 260 8, 298 5" stroke="var(--thread)" delay={0.7} duration={1.1} />
-      </svg>
     </div>
   );
 }
@@ -149,7 +145,7 @@ function WideProject({ project }: { project: ProjectT }) {
           <div className="slide end-card" style={{ left: layout.slides[endIndex].left, width: layout.slides[endIndex].w, height: layout.H }}>
             <Link to={`/work/${next.slug}`} className="end-card-link">
               <span className="small soft">next project</span>
-              <span className="serif italic end-card-title">{next.title}</span>
+              <span className="serif end-card-title">{next.title}</span>
               <span className="end-card-thumb">
                 <Img src={coverOf(next).src} alt="" sizes="160px" />
               </span>
@@ -326,7 +322,7 @@ function NarrowProject({ project }: { project: ProjectT }) {
       </div>
       <Link to={`/work/${next.slug}`} className="narrow-next">
         <span className="small soft">next project</span>
-        <span className="serif italic">{next.title} →</span>
+        <span className="serif">{next.title} →</span>
       </Link>
       <Footer />
     </div>

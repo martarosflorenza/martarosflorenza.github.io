@@ -2,7 +2,7 @@
 .hero {
   position: relative;
   padding-top: calc(var(--header-h) + 8vh);
-  padding-bottom: 22vh;
+  padding-bottom: 10vh;
   row-gap: 32px;
   align-content: start;
 }
@@ -11,19 +11,12 @@
 .hero-sub { margin-top: 14px; letter-spacing: 0.06em; }
 .hero-cover { grid-column: 2 / span 10; position: relative; z-index: 2; background: var(--paper); }
 .hero-caption { margin-top: 8px; text-align: right; }
-.hero-pin { position: absolute; right: 2vw; top: calc(var(--header-h) + 2vh); width: 70px; color: var(--ink); z-index: 3; }
-.hero-button { position: absolute; left: 6vw; bottom: 8vh; width: 34px; color: var(--ink); }
-.hero-thread { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 0; }
-.hero-pin svg { overflow: visible; }
 
 @media (min-width: 768px) {
   .hero { min-height: 100vh; min-height: 100svh; padding-top: calc(var(--header-h) + 14vh); padding-bottom: 14vh; }
   .hero-intro { grid-column: 1 / span 4; padding-top: 6vh; }
   .hero-title { font-size: clamp(40px, 4.4vw, 68px); }
-  .hero-cover { grid-column: 6 / span 4; margin-top: 2vh; }
-  /* Deliberate break: the pin overlaps the cover's right edge and leaves the grid. */
-  .hero-pin { right: auto; left: calc(75% - 2vw); top: calc(var(--header-h) + 6vh); width: clamp(90px, 9vw, 150px); }
-  .hero-button { left: auto; right: 12vw; bottom: 16vh; width: 46px; }
+  .hero-cover { grid-column: 7 / span 5; margin-top: 2vh; }
 }
 
 /* ---------- Index ---------- */
@@ -72,7 +65,6 @@
     box-shadow: 0 18px 40px -24px rgba(21, 21, 21, 0.45);
     transform-origin: 50% 0;
   }
-  .index-preview-pin { position: absolute; left: 50%; top: -18px; width: 18px; margin-left: -9px; display: block; }
 }
 @media (hover: none) {
   .index-preview { display: none !important; }

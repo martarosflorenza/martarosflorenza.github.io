@@ -1,6 +1,5 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { profile } from "../content";
-import { ThreadLoop } from "./doodles/Doodles";
 
 const NAV = [
   { to: "/", label: "index" },
@@ -23,7 +22,6 @@ export function Header() {
               <li key={item.to}>
                 <NavLink to={item.to} end={item.to === "/"} aria-current={active ? "page" : undefined}>
                   <span className="bracket">{item.label}</span>
-                  {active && <ThreadLoop className="nav-loop" key={pathname} delay={0.5} inView={false} />}
                 </NavLink>
               </li>
             );

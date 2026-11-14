@@ -1,11 +1,10 @@
 import { profile } from "../content";
-import { Hanger } from "./doodles/Doodles";
 
 export function Footer() {
   const { email, instagram, phone } = profile.contact;
   return (
     <footer className="site-footer">
-      <hr className="stitch" style={{ marginInline: "var(--margin)", marginBottom: 28 }} />
+      <hr className="rule" style={{ marginInline: "var(--margin)", marginBottom: 28 }} />
       <div className="grid">
         <div style={{ gridColumn: "1 / span 12", maxWidth: 420 }} className="footer-lead">
           <p className="serif" style={{ fontSize: 26, lineHeight: 1.1 }}>
@@ -19,7 +18,6 @@ export function Footer() {
         </ul>
         <div style={{ gridColumn: "9 / span 4", display: "flex", justifyContent: "flex-end", alignItems: "end", gap: 12 }}>
           <span className="small soft">© {new Date().getFullYear()} {profile.name.toLowerCase()}</span>
-          <Hanger className="footer-hanger" style={{ width: 44, color: "var(--ink)" }} />
         </div>
       </div>
     </footer>

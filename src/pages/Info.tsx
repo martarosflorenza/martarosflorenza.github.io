@@ -32,7 +32,7 @@ export function Info() {
 
           <Reveal className="info-block info-clients">
             <h2 className="small soft">selected clients</h2>
-            <p className="serif italic">{profile.clients.join(", ")}.</p>
+            <p className="serif">{profile.clients.join(", ")}.</p>
           </Reveal>
 
           <Reveal className="info-portrait">

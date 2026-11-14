@@ -117,6 +117,12 @@ picture { display: block; }
 .rule { height: 1px; border: 0; margin: 0; background: #e6e6e6; }
 .site-footer { padding-block: 28px 32px; }
 .site-footer .grid { row-gap: 12px; align-items: end; }
+.footer-links { grid-column: 1 / span 12; display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.footer-copy { grid-column: 1 / span 12; }
+@media (min-width: 768px) {
+  .footer-links { grid-column: 1 / span 8; }
+  .footer-copy { grid-column: 9 / span 4; text-align: right; }
+}
 
 /* ---------- Page transition ---------- */
 .page { min-height: 100vh; min-height: 100dvh; }

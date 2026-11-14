@@ -105,12 +105,19 @@ picture { display: block; }
   background: none; /* Transparent: the name and menu float over the page while scrolling. */
 }
 .site-header > * { pointer-events: auto; }
-.wordmark { font-size: 16px; font-weight: 600; line-height: 1; letter-spacing: -0.01em; }
-@media (min-width: 768px) { .wordmark { font-size: 18px; } }
+.wordmark { font-size: 15px; font-weight: 600; line-height: 1; letter-spacing: 0.02em; text-transform: uppercase; }
+@media (min-width: 768px) { .wordmark { font-size: 16px; } }
+.site-header { gap: 16px; }
+.wordmark { white-space: nowrap; }
 .site-nav { display: flex; gap: 14px; font-size: 12px; letter-spacing: 0.06em; }
 @media (min-width: 768px) { .site-nav { gap: 28px; font-size: 13px; } }
 .site-nav a { position: relative; padding-block: 6px; color: var(--ink-soft); transition: color 0.3s; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
+/* Small phones: the capitalised name and the menu must both fit on one line. */
+@media (max-width: 399px) {
+  .wordmark { font-size: 12px; letter-spacing: 0.01em; }
+  .site-nav { gap: 8px; font-size: 11px; letter-spacing: 0.03em; }
+}
 .site-nav a[aria-current="page"] .bracket { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 /* ---------- Footer ---------- */

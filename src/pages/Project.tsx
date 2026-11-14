@@ -263,11 +263,11 @@ function Slide({ media, box, active, near, onSelect }: { media: MediaItem; box: 
   );
 }
 
-function InfoPanel({ project, onClose }: { project: ProjectT; onClose: () => void }) {
+function InfoPanel({ project, onClose, className = "" }: { project: ProjectT; onClose: () => void; className?: string }) {
   const reduce = useReducedMotion();
   return (
     <motion.aside
-      className="info-panel"
+      className={`info-panel ${className}`.trim()}
       aria-label="Project information"
       initial={{ opacity: 0, y: reduce ? 0 : 24 }}
       animate={{ opacity: 1, y: 0 }}
@@ -418,6 +418,14 @@ function YouTube({ id, title }: { id: string; title: string }) {
 function VideoProject({ project }: { project: ProjectT }) {
   const { next } = neighbours(project.slug);
   const nextHref = useNextHref(next);
+  const wide = useMediaQuery("(min-width: 900px)");
+  const [infoOpen, setInfoOpen] = useState(false);
+  useEffect(() => {
+    if (!infoOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setInfoOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [infoOpen]);
   return (
     <div className="video-project">
       <p className="small soft video-back">
@@ -426,10 +434,28 @@ function VideoProject({ project }: { project: ProjectT }) {
       <YouTube id={project.youtubeId!} title={project.title} />
       <div className="video-text">
         <h1 className="serif video-title">{project.title}</h1>
-        <p className="small soft video-credit"><CreditLine project={project} /></p>
-        <div className="video-facts">
-          <ProjectFacts project={project} />
-        </div>
+        {wide ? (
+          // Same "[ information ]" toggle as the photo projects on desktop.
+          <>
+            <div className="video-bar">
+              <button className="bracket" onClick={() => setInfoOpen((v) => !v)} aria-expanded={infoOpen}>
+                information
+              </button>
+              <p className="soft video-credit"><CreditLine project={project} /></p>
+            </div>
+            <AnimatePresence>
+              {infoOpen && <InfoPanel project={project} onClose={() => setInfoOpen(false)} className="is-inline" />}
+            </AnimatePresence>
+          </>
+        ) : (
+          // On small screens the information sits under the content, like the photo projects.
+          <>
+            <p className="small soft video-credit"><CreditLine project={project} /></p>
+            <div className="video-facts">
+              <ProjectFacts project={project} />
+            </div>
+          </>
+        )}
       </div>
       <Link to={nextHref} className="narrow-next">
         <span className="small soft">next project</span>

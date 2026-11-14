@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { MediaItem } from "../content";
 import { manifest } from "../content";
+import { availableWidths, mediaUrl } from "../lib/paths";
 
 const SHORT_CLIP = 60; // seconds; shorter clips loop silently like moving photographs
 
@@ -12,7 +13,7 @@ const SHORT_CLIP = 60; // seconds; shorter clips loop silently like moving photo
 export function Video({ media, active, className }: { media: MediaItem; active: boolean; className?: string }) {
   const ref = useRef<HTMLVideoElement>(null);
   const entry = manifest[media.src];
-  const poster = entry?.posterBase ? `${entry.posterBase}-${entry.widths.find((w) => w >= 960) ?? entry.widths.at(-1)}.webp` : undefined;
+  const poster = entry?.posterBase ? mediaUrl(`${entry.posterBase}-${availableWidths(entry.widths)[0]}.webp`) : undefined;
   const isShort = (media.duration ?? 0) <= SHORT_CLIP;
   const [muted, setMuted] = useState(true);
 
@@ -27,7 +28,7 @@ export function Video({ media, active, className }: { media: MediaItem; active: 
     <div className={className} style={{ position: "relative", width: "100%", height: "100%" }}>
       <video
         ref={ref}
-        src={media.src}
+        src={mediaUrl(media.src)}
         poster={poster}
         width={media.width}
         height={media.height}

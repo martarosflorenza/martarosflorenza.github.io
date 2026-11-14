@@ -1,6 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, MemoryRouter } from "react-router-dom";
+import { IS_PREVIEW_BUILD } from "./lib/paths";
+import { HashSync, initialPreviewPath } from "./lib/HashSync";
 import "@fontsource/instrument-serif/400.css";
 import "@fontsource/instrument-serif/400-italic.css";
 import "@fontsource-variable/inter-tight";
@@ -11,8 +13,16 @@ if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    {IS_PREVIEW_BUILD ? (
+      // The preview page cannot use real URLs, so routes live in memory and mirror to a plain #hash.
+      <MemoryRouter initialEntries={[initialPreviewPath()]}>
+        <HashSync />
+        <App />
+      </MemoryRouter>
+    ) : (
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    )}
   </StrictMode>,
 );

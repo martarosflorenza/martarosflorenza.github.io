@@ -1,5 +1,6 @@
 import { useState, type CSSProperties } from "react";
 import { manifest } from "../content";
+import { IS_PREVIEW_BUILD, availableWidths, mediaUrl } from "../lib/paths";
 
 type Props = {
   src: string;
@@ -18,15 +19,16 @@ type Props = {
 export function Img({ src, alt, sizes, className, style, priority }: Props) {
   const entry = manifest[src];
   const [loaded, setLoaded] = useState(false);
-  if (!entry) return <img src={src} alt={alt} className={className} style={style} loading="lazy" />;
+  if (!entry) return <img src={mediaUrl(src)} alt={alt} className={className} style={style} loading="lazy" />;
 
-  const base = entry.type === "video" ? entry.posterBase! : entry.base!;
-  const set = (ext: string) => entry.widths.map((w) => `${base}-${w}.${ext} ${w}w`).join(", ");
-  const fallbackWidth = entry.widths.find((w) => w >= 960) ?? entry.widths[entry.widths.length - 1];
+  const base = mediaUrl(entry.type === "video" ? entry.posterBase! : entry.base!);
+  const widths = availableWidths(entry.widths);
+  const set = (ext: string) => widths.map((w) => `${base}-${w}.${ext} ${w}w`).join(", ");
+  const fallbackWidth = widths[0];
 
   return (
     <picture className={className} style={style}>
-      <source type="image/avif" srcSet={set("avif")} sizes={sizes} />
+      {!IS_PREVIEW_BUILD && <source type="image/avif" srcSet={set("avif")} sizes={sizes} />}
       <source type="image/webp" srcSet={set("webp")} sizes={sizes} />
       <img
         src={`${base}-${fallbackWidth}.webp`}

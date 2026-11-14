@@ -1,0 +1,30 @@
+.info { padding-top: calc(var(--header-h) + 8vh); padding-bottom: 12vh; row-gap: 48px; position: relative; }
+.info-text { grid-column: 1 / span 12; display: grid; gap: 28px; position: relative; z-index: 1; }
+.info-lead { font-size: clamp(28px, 7.4vw, 34px); line-height: 1.12; max-width: 22ch; text-wrap: balance; }
+.info-body { font-size: 15px; line-height: 1.6; max-width: 46ch; padding-left: 12%; }
+@media (max-width: 899px) { .info-lead { padding-right: 96px; } }
+.info-block { display: grid; gap: 8px; }
+.info-block h2 { font-weight: 400; letter-spacing: 0.06em; }
+.info-contact { display: grid; gap: 4px; font-size: 15px; }
+.info-contact li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
+.copy-btn { letter-spacing: 0.04em; }
+.copy-btn:hover { color: var(--ink); }
+.info-clients p { font-size: 22px; line-height: 1.25; max-width: 30ch; }
+.info-portrait { width: 44%; max-width: 220px; }
+.info-drawing { position: absolute; right: var(--margin); top: calc(var(--header-h) + 1vh); width: 22vw; max-width: 84px; color: var(--ink); opacity: 0.9; z-index: 0; pointer-events: none; }
+.info-form { width: 100%; }
+
+@media (min-width: 900px) {
+  .info { padding-top: calc(var(--header-h) + 12vh); }
+  /* Two text blocks offset against each other, the drawing holding the right half. */
+  .info-text { grid-column: 1 / span 6; gap: 40px; }
+  .info-lead { font-size: clamp(34px, 3vw, 48px); }
+  .info-body { padding-left: 28%; }
+  .info-block { padding-left: 28%; }
+  .info-portrait { width: 30%; margin-left: 0; }
+  .info-drawing {
+    position: sticky; top: calc(var(--header-h) + 4vh); align-self: start;
+    grid-column: 8 / span 4; width: auto; max-width: none; right: auto;
+  }
+  .info-form { max-height: calc(100vh - var(--header-h) - 12vh); margin-inline: auto; }
+}

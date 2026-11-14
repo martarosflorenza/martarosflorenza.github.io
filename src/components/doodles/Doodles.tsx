@@ -112,3 +112,49 @@ export function ThreadLoop({ className, style, delay = 0, inView = true }: Doodl
     </svg>
   );
 }
+
+/** A dressmaker's dress form on its stand, drawn in loose passes. Used large on the info page. */
+export function DressForm({ className, style, delay = 0.3, inView = false }: DoodleProps) {
+  const strokes: { d: string; red?: boolean; w?: number }[] = [
+    // Neck cap
+    { d: "M128 38 C 128 27, 172 27, 172 38 C 172 47, 128 47, 128 38" },
+    { d: "M131 44 L 131 52 M 169 44 L 169 52" },
+    // Left side: shoulder, arm cap, waist, hip
+    { d: "M131 52 C 110 58, 82 62, 73 82 C 66 98, 74 122, 83 142 C 92 172, 93 202, 87 232 C 80 262, 69 302, 74 332 C 78 360, 110 374, 150 374" },
+    // Right side
+    { d: "M169 52 C 190 58, 218 62, 227 82 C 234 98, 226 122, 217 142 C 208 172, 207 202, 213 232 C 220 262, 231 302, 226 332 C 222 360, 190 374, 150 374" },
+    // Second, looser pass on the silhouette
+    { d: "M76 86 C 70 104, 79 128, 87 150 M 224 86 C 230 104, 221 128, 213 150", w: 1.6 },
+    // Arm-hole plates
+    { d: "M73 82 C 80 92, 82 112, 80 128 M 227 82 C 220 92, 218 112, 220 128", w: 1.6 },
+    // Centre-front seam and princess seams
+    { d: "M150 54 C 148 150, 152 262, 150 372", w: 1.4 },
+    { d: "M112 64 C 106 140, 118 200, 112 250 C 108 300, 116 340, 122 370 M 188 64 C 194 140, 182 200, 188 250 C 192 300, 184 340, 178 370", w: 1.2 },
+    // Bust line
+    { d: "M84 150 C 120 172, 180 172, 216 150", w: 1.4 },
+    // Tape measure at the waist, in thread red
+    { d: "M88 232 C 120 246, 180 246, 212 232 C 222 228, 228 240, 218 246 C 210 250, 214 262, 222 268", red: true, w: 2.2 },
+    // Stand
+    { d: "M150 374 L 150 524" },
+    { d: "M144 386 L 156 386 M 144 520 L 156 520", w: 1.6 },
+    { d: "M150 524 C 130 540, 112 552, 96 566 M 150 524 C 170 540, 188 552, 204 566 M 150 524 L 150 572" },
+    { d: "M90 568 C 94 566, 100 566, 102 568 M 198 568 C 202 566, 208 566, 210 568", w: 1.6 },
+  ];
+  return (
+    <svg viewBox="50 18 200 560" className={className} style={style} aria-hidden="true">
+      <g filter="url(#pencil)">
+        {strokes.map((s, i) => (
+          <Draw
+            key={i}
+            d={s.d}
+            delay={delay + i * 0.16}
+            duration={1.3}
+            inView={inView}
+            strokeWidth={s.w ?? 2}
+            stroke={s.red ? "var(--thread)" : "currentColor"}
+          />
+        ))}
+      </g>
+    </svg>
+  );
+}

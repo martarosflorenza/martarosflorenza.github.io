@@ -5,7 +5,8 @@ import { CursorProvider } from "./components/Cursor";
 import { PencilFilter } from "./components/doodles/PencilFilter";
 import { Home } from "./pages/Home";
 import { Project } from "./pages/Project";
-import { Placeholder } from "./pages/Placeholder";
+import { Work } from "./pages/Work";
+import { Info } from "./pages/Info";
 import { NotFound } from "./pages/NotFound";
 
 export function App() {
@@ -19,9 +20,9 @@ export function App() {
         <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
-            <Route path="/work" element={<Placeholder name="Work" />} />
+            <Route path="/work" element={<Work />} />
             <Route path="/work/:slug" element={<Project />} />
-            <Route path="/info" element={<Placeholder name="Info" />} />
+            <Route path="/info" element={<Info />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>

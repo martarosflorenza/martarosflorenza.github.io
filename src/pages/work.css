@@ -1,0 +1,35 @@
+.work { padding-top: calc(var(--header-h) + 6vh); padding-bottom: 14vh; }
+.work-head { row-gap: 18px; align-items: end; margin-bottom: 6vh; }
+.work-title { grid-column: 1 / span 12; font-size: clamp(40px, 10vw, 56px); line-height: 1; font-style: italic; }
+.work-filters { grid-column: 1 / span 12; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12px; letter-spacing: 0.06em; }
+.work-filter { position: relative; color: var(--ink-soft); padding-block: 6px; transition: color 0.3s; }
+.work-filter[aria-pressed="true"], .work-filter:hover { color: var(--ink); }
+.work-filter .count { font-size: 14px; letter-spacing: 0; }
+.work-filter-loop { position: absolute; left: -4px; right: -4px; bottom: -4px; width: calc(100% + 8px); height: 10px; }
+
+/* Mobile: two staggered columns */
+.work-grid { row-gap: 40px; align-items: start; }
+.work-item { grid-column: span 6; }
+.work-item:nth-child(even) { margin-top: 14vw; }
+.work-card { display: grid; gap: 10px; }
+.work-card-img { display: block; overflow: hidden; background: var(--paper-deep); }
+.work-card-img .img { transition: transform 0.9s var(--ease), opacity 0.6s var(--ease); }
+.work-card-meta { display: grid; gap: 2px; }
+.work-card-title { font-size: 20px; line-height: 1.1; }
+
+@media (min-width: 900px) {
+  .work-head { margin-bottom: 10vh; }
+  .work-title { grid-column: 1 / span 6; font-size: clamp(56px, 6vw, 96px); }
+  .work-filters { grid-column: 7 / span 6; justify-content: flex-end; gap: 6px 28px; font-size: 13px; }
+  .work-grid { row-gap: 9vh; }
+  .work-item:nth-child(even) { margin-top: 0; }
+  /* A strict 12-column grid with a repeating, deliberately uneven rhythm. */
+  .work-item:nth-child(5n + 1) { grid-column: 1 / span 4; }
+  .work-item:nth-child(5n + 2) { grid-column: 6 / span 3; margin-top: 14vh; }
+  .work-item:nth-child(5n + 3) { grid-column: 10 / span 3; margin-top: 4vh; }
+  .work-item:nth-child(5n + 4) { grid-column: 2 / span 3; }
+  .work-item:nth-child(5n + 5) { grid-column: 7 / span 5; margin-top: 8vh; }
+  .work-card-title { font-size: clamp(22px, 1.8vw, 30px); }
+  .work-card:hover .work-card-img .img { transform: scale(1.025); }
+  .work-card:hover .work-card-title { font-style: italic; }
+}

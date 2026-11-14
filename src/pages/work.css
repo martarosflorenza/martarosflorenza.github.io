@@ -3,9 +3,9 @@
 .work-title { grid-column: 1 / span 12; font-size: clamp(40px, 10vw, 56px); line-height: 1; }
 .work-filters { grid-column: 1 / span 12; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12px; letter-spacing: 0.06em; }
 .work-filter { position: relative; color: var(--ink-soft); padding-block: 6px; transition: color 0.3s; }
-.work-filter[aria-pressed="true"], .work-filter:hover { color: var(--ink); }
+.work-filter[aria-current="page"], .work-filter:hover { color: var(--ink); }
 .work-filter .count { color: var(--ink-faint); }
-.work-filter[aria-pressed="true"] .bracket { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.work-filter[aria-current="page"] .bracket { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 /* Mobile: two staggered columns */
 .work-grid { row-gap: 40px; align-items: start; }
@@ -13,6 +13,9 @@
 .work-item:nth-child(even) { margin-top: 14vw; }
 .work-card { display: grid; gap: 10px; }
 .work-card-img { display: block; overflow: hidden; background: var(--paper-deep); }
+/* Tall portraits never dominate: a cover is at most --max-h tall, narrowing to keep its ratio. */
+.work-card { --max-h: min(52vh, 460px); }
+.work-card-img { width: min(100%, calc(var(--max-h) * var(--ratio, 0.8))); }
 .work-card-img .img { transition: transform 0.9s var(--ease), opacity 0.6s var(--ease); }
 .work-card-meta { display: grid; gap: 2px; }
 .work-card-title { font-size: 20px; line-height: 1.1; }
@@ -29,6 +32,7 @@
   .work-item:nth-child(5n + 3) { grid-column: 10 / span 3; margin-top: 4vh; }
   .work-item:nth-child(5n + 4) { grid-column: 2 / span 3; }
   .work-item:nth-child(5n + 5) { grid-column: 7 / span 5; margin-top: 8vh; }
+  .work-card { --max-h: min(62vh, 640px); }
   .work-card-title { font-size: clamp(22px, 1.8vw, 30px); }
   .work-card:hover .work-card-img .img { transform: scale(1.025); }
 }

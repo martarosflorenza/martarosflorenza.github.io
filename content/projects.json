@@ -1,30 +1,37 @@
 {
-  "_help": "See README.md, 'Add a new project'. Media items need only a src, e.g. { \"src\": \"/assets/new-shoot/photo-01.jpg\" }. The order here is the order on the site.",
+  "_help": "See README.md, 'Add a new project'. Media items need only a src, e.g. { \"src\": \"/assets/new-shoot/photo-01.jpg\" }. The order here is the order on the site. Optional fields: publication, projectName, designer (editorial); client, artist, production; caption (replaces the line under the images); note; youtubeId + cover (video projects shown with an embedded YouTube player).",
   "categories": [
     {
       "slug": "editorial",
       "label": "Editorial"
     },
     {
+      "slug": "commercial",
+      "label": "Commercial"
+    },
+    {
       "slug": "runway",
       "label": "Runway"
     },
     {
-      "slug": "commercial",
-      "label": "Commercial"
+      "slug": "music",
+      "label": "Music"
     }
   ],
+  "redirects": {
+    "veronika": "play-again",
+    "miguel": "introspection"
+  },
   "projects": [
     {
       "slug": "vanguard",
       "category": "editorial",
       "title": "Vanguard Magazine",
-      "client": "Vanguard Magazine",
+      "publication": "Vanguard Magazine",
       "year": 2026,
-      "role": "Stylist",
+      "role": "Stylist & Creative Director",
       "description": "",
       "credits": [],
-      "caption_original": "VANGUARD MAGAZINE / 2026",
       "media": [
         {
           "type": "image",
@@ -95,12 +102,11 @@
       "slug": "lula-japan-2026",
       "category": "editorial",
       "title": "Lula Japan",
-      "client": "Lula Japan",
+      "publication": "Lula Japan",
       "year": 2026,
-      "role": "Stylist",
+      "role": "Stylist & Creative Director",
       "description": "",
       "credits": [],
-      "caption_original": "FOR LULA JAPAN",
       "media": [
         {
           "type": "image",
@@ -164,12 +170,11 @@
       "slug": "sicky",
       "category": "editorial",
       "title": "Sicky Magazine",
-      "client": "Sicky Magazine",
+      "publication": "Sicky Magazine",
       "year": 2026,
-      "role": "Stylist",
+      "role": "Stylist & Creative Director",
       "description": "",
       "credits": [],
-      "caption_original": "FOR SICKY MAGAZINE",
       "media": [
         {
           "type": "image",
@@ -254,12 +259,11 @@
       "slug": "schon",
       "category": "editorial",
       "title": "Schön!",
-      "client": "Schön! Magazine",
+      "publication": "Schön! Magazine",
       "year": 2025,
       "role": "Stylist",
       "description": "",
       "credits": [],
-      "caption_original": "FOR SCHON MAGAZINE",
       "media": [
         {
           "type": "image",
@@ -330,12 +334,11 @@
       "slug": "fucking-young",
       "category": "editorial",
       "title": "Fucking Young",
-      "client": "Fucking Young",
+      "publication": "Fucking Young",
       "year": 2025,
-      "role": "Stylist",
+      "role": "Stylist & Creative Director",
       "description": "",
       "credits": [],
-      "caption_original": "FOR FUCKING YOUNG",
       "media": [
         {
           "type": "image",
@@ -399,12 +402,11 @@
       "slug": "lula-japan-2025",
       "category": "editorial",
       "title": "Lula Japan",
-      "client": "Lula Japan",
+      "publication": "Lula Japan",
       "year": 2025,
-      "role": "Stylist",
+      "role": "Stylist & Creative Director",
       "description": "",
       "credits": [],
-      "caption_original": "FOR LULA JAPAN",
       "media": [
         {
           "type": "image",
@@ -489,12 +491,11 @@
       "slug": "unsent",
       "category": "editorial",
       "title": "Unsent",
-      "client": "Navales",
+      "designer": "Navales",
       "year": 2026,
       "role": "Stylist",
       "description": "",
       "credits": [],
-      "caption_original": "UNSENT / NAVALES",
       "media": [
         {
           "type": "image",
@@ -548,15 +549,14 @@
       ]
     },
     {
-      "slug": "veronika",
+      "slug": "play-again",
       "category": "editorial",
-      "title": "Veronika",
-      "client": "Passion project",
+      "title": "Play Again",
+      "projectName": "Passion Project",
       "year": 2026,
-      "role": "Stylist",
+      "role": "Stylist & Creative Director",
       "description": "",
       "credits": [],
-      "caption_original": "VERONIKA / PASSION PROJECT",
       "media": [
         {
           "type": "image",
@@ -613,17 +613,11 @@
       "slug": "xandri-collection",
       "category": "editorial",
       "title": "Xandri Collection",
-      "client": null,
+      "designer": "Xandri",
       "year": 2026,
       "role": "Stylist",
       "description": "",
-      "credits": [
-        {
-          "role": "photography",
-          "name": "Aitana del Sol"
-        }
-      ],
-      "caption_original": "XANDRI COLLECTION / BY AITANA DEL SOL",
+      "credits": [],
       "media": [
         {
           "type": "image",
@@ -673,17 +667,11 @@
       "slug": "childhood-dream",
       "category": "editorial",
       "title": "Childhood Dream",
-      "client": null,
+      "designer": "Rosella Vega",
       "year": 2026,
       "role": "Stylist",
       "description": "",
-      "credits": [
-        {
-          "role": "photography",
-          "name": "Carla Fuster"
-        }
-      ],
-      "caption_original": "CHILDHOOD DREAM / BY CARLA FUSTER",
+      "credits": [],
       "media": [
         {
           "type": "image",
@@ -716,20 +704,14 @@
       ]
     },
     {
-      "slug": "miguel",
+      "slug": "introspection",
       "category": "editorial",
-      "title": "Miguel",
-      "client": "Passion project",
+      "title": "Introspection",
+      "projectName": "Passion Project",
       "year": 2025,
       "role": "Stylist",
       "description": "",
-      "credits": [
-        {
-          "role": "photography",
-          "name": "Andrés Bustamante"
-        }
-      ],
-      "caption_original": "MIGUEL BY ANDRÉS BUSTAMANTE / PASSION PROJECT",
+      "credits": [],
       "media": [
         {
           "type": "image",
@@ -772,17 +754,11 @@
       "slug": "dont-call-me-again",
       "category": "editorial",
       "title": "Don't Call Me Again",
-      "client": null,
       "year": 2026,
-      "role": "Stylist",
+      "role": "Stylist & Creative Director",
+      "note": "Selected as part of the London Fashion Film Festival official selection",
       "description": "",
-      "credits": [
-        {
-          "role": "selection",
-          "name": "London Fashion Film Festival"
-        }
-      ],
-      "caption_original": "SELECTED AS PART OF THE LONDON FASHION FILM FESTIVAL OFFICIAL SELECTION",
+      "credits": [],
       "media": [
         {
           "type": "video",
@@ -799,16 +775,12 @@
       "category": "runway",
       "title": "Leduc — Sons of Tailoring",
       "client": "Leduc",
+      "production": "080 Barcelona Fashion",
       "year": 2024,
-      "role": "Stylist",
+      "role": "Styling Assistant",
+      "caption": "Styling Assistant — Leduc's Runway Show",
       "description": "",
-      "credits": [
-        {
-          "role": "show",
-          "name": "080 Barcelona Fashion"
-        }
-      ],
-      "caption_original": "LEDUC - SONS OF TAILORING - 080 BARCELONA",
+      "credits": [],
       "media": [
         {
           "type": "image",
@@ -884,29 +856,18 @@
     },
     {
       "slug": "pellizco",
-      "category": "runway",
-      "title": "Pellizco",
-      "client": "Maria Arnal",
+      "category": "music",
+      "title": "Pellizco — María Arnal",
+      "artist": "María Arnal",
+      "production": "Canada",
       "year": 2026,
-      "role": "Stylist",
+      "role": "Styling Assistant",
+      "caption": "Styling Assistant — Pellizco Videoclip",
       "description": "",
-      "credits": [
-        {
-          "role": "music video",
-          "name": "Maria Arnal"
-        }
-      ],
-      "caption_original": "PELLIZCO - MARIA ARNAL",
-      "media": [
-        {
-          "type": "video",
-          "src": "/assets/vicaclip/vicaclip-01.mp4",
-          "width": 720,
-          "height": 332,
-          "alt": "Pellizco, video",
-          "duration": 155.8
-        }
-      ]
+      "credits": [],
+      "youtubeId": "r3GAghAaR1k",
+      "cover": "/assets/covers/pellizco-cover.jpg",
+      "media": []
     },
     {
       "slug": "good-news-coffee",
@@ -917,7 +878,6 @@
       "role": "Stylist",
       "description": "",
       "credits": [],
-      "caption_original": "GOOD NEWS COFFEE / 2026",
       "media": [
         {
           "type": "image",
@@ -994,153 +954,152 @@
     {
       "slug": "two-jeys-media",
       "category": "commercial",
-      "title": "Two Jeys — Media Shoots",
+      "title": "Two Jeys — Media Content",
       "client": "Two Jeys",
       "year": 2026,
       "role": "Stylist",
       "description": "",
       "credits": [],
-      "caption_original": "TWO JEYS - MEDIA SHOOTS / 2026",
       "media": [
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-01.jpg",
           "width": 1206,
           "height": 1587,
-          "alt": "Two Jeys — Media Shoots, image 1 of 20"
+          "alt": "Two Jeys — Media Content, image 1 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-02.jpg",
           "width": 1082,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 2 of 20"
+          "alt": "Two Jeys — Media Content, image 2 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-03.jpg",
           "width": 1082,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 3 of 20"
+          "alt": "Two Jeys — Media Content, image 3 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-04.jpg",
           "width": 1206,
           "height": 824,
-          "alt": "Two Jeys — Media Shoots, image 4 of 20"
+          "alt": "Two Jeys — Media Content, image 4 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-05.jpg",
           "width": 1440,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 5 of 20"
+          "alt": "Two Jeys — Media Content, image 5 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-06.jpg",
           "width": 1082,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 6 of 20"
+          "alt": "Two Jeys — Media Content, image 6 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-07.jpg",
           "width": 1082,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 7 of 20"
+          "alt": "Two Jeys — Media Content, image 7 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-08.jpg",
           "width": 1206,
           "height": 797,
-          "alt": "Two Jeys — Media Shoots, image 8 of 20"
+          "alt": "Two Jeys — Media Content, image 8 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-09.jpg",
           "width": 1440,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 9 of 20"
+          "alt": "Two Jeys — Media Content, image 9 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-10.jpg",
           "width": 1082,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 10 of 20"
+          "alt": "Two Jeys — Media Content, image 10 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-11.jpg",
           "width": 1440,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 11 of 20"
+          "alt": "Two Jeys — Media Content, image 11 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-12.jpg",
           "width": 1440,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 12 of 20"
+          "alt": "Two Jeys — Media Content, image 12 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-13.jpg",
           "width": 1206,
           "height": 793,
-          "alt": "Two Jeys — Media Shoots, image 13 of 20"
+          "alt": "Two Jeys — Media Content, image 13 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-14.jpg",
           "width": 1082,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 14 of 20"
+          "alt": "Two Jeys — Media Content, image 14 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-15.jpg",
           "width": 1440,
           "height": 1920,
-          "alt": "Two Jeys — Media Shoots, image 15 of 20"
+          "alt": "Two Jeys — Media Content, image 15 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-16.jpg",
           "width": 1206,
           "height": 805,
-          "alt": "Two Jeys — Media Shoots, image 16 of 20"
+          "alt": "Two Jeys — Media Content, image 16 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-17.jpg",
           "width": 1920,
           "height": 1082,
-          "alt": "Two Jeys — Media Shoots, image 17 of 20"
+          "alt": "Two Jeys — Media Content, image 17 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-18.jpg",
           "width": 1206,
           "height": 803,
-          "alt": "Two Jeys — Media Shoots, image 18 of 20"
+          "alt": "Two Jeys — Media Content, image 18 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-19.jpg",
           "width": 1206,
           "height": 797,
-          "alt": "Two Jeys — Media Shoots, image 19 of 20"
+          "alt": "Two Jeys — Media Content, image 19 of 20"
         },
         {
           "type": "image",
           "src": "/assets/twojeys/twojeys-20.jpg",
           "width": 1206,
           "height": 798,
-          "alt": "Two Jeys — Media Shoots, image 20 of 20"
+          "alt": "Two Jeys — Media Content, image 20 of 20"
         }
       ]
     },
@@ -1153,7 +1112,6 @@
       "role": "Stylist",
       "description": "",
       "credits": [],
-      "caption_original": "TWO JEYS - E COMMERCE / 2026",
       "media": [
         {
           "type": "image",
@@ -1236,7 +1194,6 @@
       "role": "Style assistant",
       "description": "",
       "credits": [],
-      "caption_original": "CASABLANCA - E COMMERCE SS25",
       "media": [
         {
           "type": "image",
@@ -1315,11 +1272,11 @@
       "category": "commercial",
       "title": "MAM Originals",
       "client": "MAM Originals",
+      "production": "Mayday",
       "year": 2026,
       "role": "Style assistant",
       "description": "",
       "credits": [],
-      "caption_original": "MAM ORIGINALS",
       "media": [
         {
           "type": "video",
@@ -1360,11 +1317,11 @@
       "category": "commercial",
       "title": "Adidas",
       "client": "Adidas",
+      "production": "Hawaii",
       "year": 2026,
       "role": "Style assistant",
       "description": "",
       "credits": [],
-      "caption_original": "ADIDAS",
       "media": [
         {
           "type": "image",
@@ -1415,37 +1372,25 @@
       "category": "commercial",
       "title": "Adidas Backyard Legends — World Cup 2026",
       "client": "Adidas",
+      "production": "Twenty Four Seven",
       "year": 2026,
       "role": "Style assistant",
       "description": "",
       "credits": [],
-      "caption_original": "ADIDAS BACKYARD LEGENDS WORLD CUP 2026",
-      "media": [
-        {
-          "type": "video",
-          "src": "/assets/world-cup/world-cup-01.mp4",
-          "width": 1024,
-          "height": 470,
-          "alt": "Adidas Backyard Legends — World Cup 2026, video",
-          "duration": 301.2
-        }
-      ]
+      "youtubeId": "mJJY53qhJe0",
+      "cover": "/assets/covers/adidas-backyard-legends-cover.jpg",
+      "media": []
     },
     {
       "slug": "loewe-ss26",
       "category": "commercial",
       "title": "Loewe SS26",
       "client": "Loewe",
+      "production": "247 Plus",
       "year": 2026,
       "role": "Style assistant",
       "description": "",
-      "credits": [
-        {
-          "role": "photography",
-          "name": "Talia Chetrit"
-        }
-      ],
-      "caption_original": "LOEWE SS26 BY TALIA CHETRIT",
+      "credits": [],
       "media": [
         {
           "type": "image",
@@ -1517,21 +1462,14 @@
       "category": "commercial",
       "title": "Coca-Cola — A Holiday Memory",
       "client": "Coca-Cola",
+      "production": "Twenty Four Seven",
       "year": 2025,
       "role": "Wardrobe assistant",
       "description": "",
       "credits": [],
-      "caption_original": "COCA-COLA - A HOLIDAY MEMORY / 2025",
-      "media": [
-        {
-          "type": "video",
-          "src": "/assets/cocacola/cocacola-01.mp4",
-          "width": 1424,
-          "height": 656,
-          "alt": "Coca-Cola — A Holiday Memory, video",
-          "duration": 13.5
-        }
-      ]
+      "youtubeId": "At1z5CfEwgY",
+      "cover": "/assets/covers/coca-cola-holiday-memory-cover.jpg",
+      "media": []
     }
   ]
 }

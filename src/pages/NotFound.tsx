@@ -10,7 +10,7 @@ export function NotFound() {
             This page does not exist.
           </h1>
           <p style={{ marginTop: 16 }}>
-            <Link to="/" className="bracket link-line">back to the index</Link>
+            <Link to="/" className="bracket link-line">back to home</Link>
           </p>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { profile } from "../content";
 
 const NAV = [
-  { to: "/", label: "index" },
+  { to: "/", label: "home" },
   { to: "/work", label: "work" },
   { to: "/info", label: "info" },
 ];

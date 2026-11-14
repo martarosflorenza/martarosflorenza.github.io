@@ -2,10 +2,17 @@
 .project-title { padding-inline: var(--margin); padding-top: calc(var(--header-h) + 4px); }
 .project-title h1 { font-size: clamp(32px, 8vw, 40px); line-height: 1.02; margin-top: 4px; }
 
-.facts dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 20px; }
+.back-link { color: var(--ink); }
+
+/* Project information: small and secondary to the images, with a thumbnail beside it. */
+.facts { display: grid; grid-template-columns: 56px 1fr; gap: 14px; align-items: start; font-size: 11px; line-height: 1.45; letter-spacing: 0.03em; }
+.facts-thumb { display: block; width: 56px; }
+.facts dl { display: grid; gap: 1px; }
+.facts-row { display: grid; grid-template-columns: 76px 1fr; gap: 10px; }
+.facts-row:not(:has(dt)) dd { grid-column: 1 / -1; color: var(--ink-soft); }
 .facts dt { color: var(--ink-soft); }
 .facts dd { margin: 0; }
-.facts-desc { font-size: 22px; line-height: 1.2; margin-bottom: 18px; max-width: 34ch; }
+.facts-desc { font-size: 12px; line-height: 1.4; margin-bottom: 8px; max-width: 40ch; }
 
 .video-sound { position: absolute; right: 8px; bottom: 8px; background: var(--paper); padding: 3px 6px; }
 
@@ -57,10 +64,10 @@
 
 .info-panel {
   position: absolute; left: var(--margin); bottom: 72px; z-index: 7;
-  width: min(380px, 40vw); padding: 20px 22px 18px;
+  width: min(320px, 36vw); padding: 14px 16px 12px;
   background: var(--paper); box-shadow: 0 20px 60px -30px rgba(21, 21, 21, 0.4);
 }
-.info-close { margin-top: 16px; color: var(--ink-soft); }
+.info-close { margin-top: 10px; color: var(--ink-soft); }
 
 .view-all {
   position: fixed; inset: 0; z-index: 50; background: var(--paper);
@@ -79,11 +86,14 @@
 .narrow-list figure { display: grid; gap: 6px; }
 .narrow-list li:nth-child(3n + 2) figure { padding-left: 14%; }  /* gentle rhythm instead of a flat column */
 .narrow-list li:nth-child(3n) figure { padding-right: 10%; }
-.narrow-facts { padding: 56px var(--margin) 0; }
+/* Tall portraits are capped in height (keeping their ratio) so no image dominates the scroll. */
+.narrow-img { display: block; width: min(100%, calc(78svh * var(--ratio, 0.8))); }
+.narrow-facts { padding: 48px var(--margin) 0; max-width: 420px; }
 .narrow-next { display: grid; gap: 4px; padding: 56px var(--margin) 64px; }
 .narrow-next .serif { font-size: 30px; line-height: 1.05; }
 @media (min-width: 600px) {
   .narrow-list { padding-inline: 12vw; gap: 64px; }
+  .narrow-img { width: min(100%, calc(66svh * var(--ratio, 0.8))); }
 }
 
 /* Quiet arrows on the click zones, shown only on hover or keyboard focus. */
@@ -101,3 +111,22 @@
   .zone-next:hover .zone-arrow { transform: translateX(3px); }
 }
 .zone:focus-visible .zone-arrow { opacity: 0.8; }
+
+/* ---------- Video projects (YouTube) ---------- */
+/* Full content width at 16:9; on short screens it narrows so the whole player stays in view.
+   The back line and the text below start at the player's left edge. */
+.video-project {
+  --video-w: min(calc(100% - 2 * var(--margin)), calc((100svh - var(--header-h) - 64px) * 16 / 9));
+  --video-inset: calc((100% - var(--video-w)) / 2);
+  padding-top: calc(var(--header-h) + 4px);
+}
+.video-back { padding-inline: var(--video-inset); margin-bottom: 14px; }
+.yt-frame { width: var(--video-w); margin-inline: auto; aspect-ratio: 16 / 9; background: #000; }
+.yt-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.video-text { padding: 20px var(--video-inset) 0; display: grid; gap: 6px; }
+.video-title { font-size: clamp(28px, 7vw, 40px); line-height: 1.05; }
+.video-credit { font-size: 12px; }
+.video-facts { margin-top: 28px; max-width: 420px; }
+@media (min-width: 900px) {
+  .video-title { font-size: clamp(28px, 2.4vw, 40px); }
+}

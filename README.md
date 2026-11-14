@@ -51,24 +51,58 @@ In `content/projects.json`, each project looks like this:
   "slug": "vanguard",
   "category": "editorial",
   "title": "Vanguard Magazine",
-  "client": "Vanguard Magazine",
+  "publication": "Vanguard Magazine",
   "year": 2026,
-  "role": "Stylist",
-  "description": "",
-  "credits": [
-    { "role": "photography", "name": "Talia Chetrit" }
-  ],
+  "role": "Stylist & Creative Director",
   "media": [ ... ]
 }
 ```
 
 - `slug` — the project's web address (`/work/vanguard`). Lowercase, no spaces, use `-`.
-  Each project needs a different one.
-- `category` — one of `editorial`, `runway`, `commercial`.
-- `credits` — any number of `{ "role": "…", "name": "…" }`. Leave `[]` for none.
+  Each project needs a different one, and it must not be a category name (`editorial`…).
+- `category` — one of `editorial`, `commercial`, `runway`, `music`. Each category has its own
+  page (`/work/editorial`…). To add a category, add it to the `categories` list at the top.
+- `role` — Marta's role, e.g. `Stylist`, `Styling Assistant`.
+- `year` — the year.
+
+Information fields — add only the ones that apply; empty ones are not shown:
+
+| Field | Shown as | Used for |
+| --- | --- | --- |
+| `publication` | publication | **Editorial** — the magazine |
+| `projectName` | project | **Editorial** — e.g. `"Passion Project"` |
+| `designer` | designer | **Editorial** — the designer |
+| `client` | client | Commercial and runway (never shown on editorial) |
+| `artist` | artist | Music |
+| `production` | production | The production company (never shown on editorial) |
+| `note` | a line of its own | e.g. a festival selection |
+| `caption` | the line under the images | Replaces the automatic "role + name" line |
+
+- `credits` — any number of `{ "role": "…", "name": "…" }`, or leave it out.
   To hide all credits on the whole site, set `"showCredits": false` in `content/profile.json`.
 - The **order of projects in the file is the order on the site**. To move a project, cut its
   whole block `{ … },` and paste it somewhere else (mind the commas between blocks).
+- **Renaming a project's slug:** add the old one to `"redirects"` at the top of the file,
+  e.g. `"redirects": { "old-slug": "new-slug" }`, so old links keep working.
+
+### YouTube video projects
+
+A project can show a YouTube video (played on the site, not sent to YouTube) instead of photos:
+
+```json
+{
+  "slug": "adidas-backyard-legends",
+  "category": "commercial",
+  "title": "Adidas Backyard Legends — World Cup 2026",
+  "youtubeId": "mJJY53qhJe0",
+  "cover": "/assets/covers/adidas-backyard-legends-cover.jpg",
+  "media": []
+}
+```
+
+`youtubeId` is the part after `watch?v=` in the YouTube address. `cover` is the still image
+shown in the grids; covers live in `public/assets/covers/` and are best at **4:5 portrait,
+1600 × 2000 px**. To change a cover, upload a new file with the same name.
 
 ## Add a new project
 

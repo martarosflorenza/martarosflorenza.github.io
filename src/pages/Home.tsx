@@ -54,7 +54,7 @@ function ProjectIndex() {
   return (
     <section className="index" aria-labelledby="index-title">
       <div className="grid index-head">
-        <h2 id="index-title" className="small soft">index ({projects.length})</h2>
+        <h2 id="index-title" className="small soft">projects ({projects.length})</h2>
         <span className="small soft index-col-cat">category</span>
         <span className="small soft index-col-year">year</span>
       </div>

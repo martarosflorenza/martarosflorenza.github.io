@@ -1,13 +1,14 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { Link, Navigate, useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { categoryLabel, coverOf, creditLine, getProject, neighbours, pad, profile, type MediaItem, type Project as ProjectT } from "../content";
+import { categoryLabel, categoryPath, coverOf, creditLine, getProject, isCategory, neighbours, pad, primaryName, profile, projectFacts, redirects, type MediaItem, type Project as ProjectT } from "../content";
 import { Page } from "../components/PageTransition";
 import { Img } from "../components/Img";
 import { Video } from "../components/Video";
 import { Reveal } from "../components/Reveal";
 import { Footer } from "../components/Footer";
 import { useMediaQuery, useViewport } from "../lib/hooks";
+import { getPreviousPath, RESTORE_STATE } from "../lib/scrollMemory";
 import { NotFound } from "./NotFound";
 import "./project.css";
 
@@ -15,21 +16,69 @@ const EASE = [0.22, 0.68, 0.18, 1] as const;
 
 export function Project() {
   const { slug = "" } = useParams();
-  const project = getProject(slug);
+  const { search } = useLocation();
   const wide = useMediaQuery("(min-width: 900px)");
+  // Renamed projects: send old addresses to the new one.
+  if (redirects[slug]) return <Navigate to={`/work/${redirects[slug]}${search}`} replace />;
+  const project = getProject(slug);
   if (!project) return <NotFound />;
   return (
     <Page title={`${project.title} — ${profile.name}`}>
-      {wide ? <WideProject key={project.slug} project={project} /> : <NarrowProject key={project.slug} project={project} />}
+      {project.youtubeId ? (
+        <VideoProject key={project.slug} project={project} />
+      ) : wide ? (
+        <WideProject key={project.slug} project={project} />
+      ) : (
+        <NarrowProject key={project.slug} project={project} />
+      )}
     </Page>
   );
+}
+
+/** Where "back" leads: the overview the visitor came from (?from=), else the project's own category. */
+function useBackTarget(project: ProjectT) {
+  const [params] = useSearchParams();
+  const from = params.get("from");
+  const to = from === "all" ? categoryPath(null) : categoryPath(from && isCategory(from) ? from : project.category);
+  const label = to === categoryPath(null) ? "all work" : categoryLabel(to.split("/")[2]).toLowerCase();
+  return { to, label };
+}
+
+/**
+ * Back to the overview. When that overview is the previous page, this is the same step as the
+ * browser's back button; otherwise it opens the overview at its remembered scroll position.
+ */
+function BackLink({ project }: { project: ProjectT }) {
+  const { to, label } = useBackTarget(project);
+  const navigate = useNavigate();
+  return (
+    <Link
+      to={to}
+      state={RESTORE_STATE}
+      className="back-link link-line"
+      onClick={(e) => {
+        if (getPreviousPath() === to) {
+          e.preventDefault();
+          navigate(-1);
+        }
+      }}
+    >
+      ← {label}
+    </Link>
+  );
+}
+
+/** The next project keeps the visitor's ?from=, so "back" still returns to the same overview. */
+function useNextHref(next: ProjectT) {
+  const { search } = useLocation();
+  return `/work/${next.slug}${search}`;
 }
 
 function TitleBlock({ project }: { project: ProjectT }) {
   return (
     <div className="project-title">
       <p className="small soft">
-        {categoryLabel(project.category).toLowerCase()} — {project.year}
+        <BackLink project={project} /> — {project.year}
       </p>
       <h1 className="serif">{project.title}</h1>
     </div>
@@ -41,6 +90,7 @@ function TitleBlock({ project }: { project: ProjectT }) {
 function WideProject({ project }: { project: ProjectT }) {
   const media = project.media;
   const { next } = neighbours(project.slug);
+  const nextHref = useNextHref(next);
   const navigate = useNavigate();
   const { w: vw, h: vh } = useViewport();
   const [index, setIndex] = useState(0);
@@ -73,13 +123,13 @@ function WideProject({ project }: { project: ProjectT }) {
       setIndex((i) => {
         const n = i + dir;
         if (n > endIndex) {
-          navigate(`/work/${next.slug}`);
+          navigate(nextHref);
           return i;
         }
         return Math.max(0, n);
       });
     },
-    [endIndex, navigate, next.slug],
+    [endIndex, navigate, nextHref],
   );
 
   // Keyboard
@@ -143,7 +193,7 @@ function WideProject({ project }: { project: ProjectT }) {
             <Slide key={m.src} media={m} box={layout.slides[i]} active={i === index} near={Math.abs(i - index) <= 2} onSelect={() => setIndex(i)} />
           ))}
           <div className="slide end-card" style={{ left: layout.slides[endIndex].left, width: layout.slides[endIndex].w, height: layout.H }}>
-            <Link to={`/work/${next.slug}`} className="end-card-link">
+            <Link to={nextHref} className="end-card-link">
               <span className="small soft">next project</span>
               <span className="serif end-card-title">{next.title}</span>
               <span className="end-card-thumb">
@@ -177,7 +227,7 @@ function WideProject({ project }: { project: ProjectT }) {
           information
         </button>
         <p className="bb-center">
-          {creditLine(project)} {project.client && <strong>{project.client.toLowerCase()}</strong>}
+          <CreditLine project={project} />
         </p>
         <button className="bracket bb-right" onClick={() => setPanel("all")} aria-haspopup="dialog">
           view all
@@ -230,22 +280,36 @@ function InfoPanel({ project, onClose }: { project: ProjectT; onClose: () => voi
   );
 }
 
+/** The line under the images: the custom caption, or role (+ note) followed by the publication/client/artist. */
+function CreditLine({ project }: { project: ProjectT }) {
+  if (project.caption) return <>{project.caption}</>;
+  const name = primaryName(project);
+  return (
+    <>
+      {creditLine(project).toLowerCase()} {name && <strong>{name.toLowerCase()}</strong>}
+    </>
+  );
+}
+
+/** Compact project information: a small thumbnail beside a short list of facts. */
 function ProjectFacts({ project }: { project: ProjectT }) {
+  const cover = coverOf(project);
   return (
     <div className="facts">
-      {project.description && <p className="facts-desc serif">{project.description}</p>}
-      <dl>
-        {project.client && (<><dt>client</dt><dd>{project.client}</dd></>)}
-        <dt>year</dt><dd>{project.year}</dd>
-        <dt>category</dt><dd>{categoryLabel(project.category).toLowerCase()}</dd>
-        {project.role && (<><dt>role</dt><dd>{project.role.toLowerCase()}</dd></>)}
-        {profile.settings.showCredits &&
-          project.credits.map((c) => (
-            <div key={c.role + c.name} style={{ display: "contents" }}>
-              <dt>{c.role}</dt><dd>{c.name}</dd>
+      <span className="facts-thumb">
+        <Img src={cover.src} alt="" sizes="72px" />
+      </span>
+      <div>
+        {project.description && <p className="facts-desc">{project.description}</p>}
+        <dl>
+          {projectFacts(project).map(([label, value]) => (
+            <div key={label + value} className="facts-row">
+              {label && <dt>{label}</dt>}
+              <dd>{value}</dd>
             </div>
           ))}
-      </dl>
+        </dl>
+      </div>
     </div>
   );
 }
@@ -277,7 +341,7 @@ function ViewAll({ project, onPick, onClose }: { project: ProjectT; onPick: (i: 
           <motion.li key={m.src} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 + i * 0.025, duration: 0.4 }}>
             <button onClick={() => onPick(i)} aria-label={`Show image ${i + 1}`}>
               <Img src={m.src} alt="" sizes="(min-width: 900px) 15vw, 30vw" />
-              <span className="small soft">{pad(i + 1)}{m.type === "video" ? " · film" : ""}</span>
+              <span className="small soft">{pad(i + 1)}</span>
             </button>
           </motion.li>
         ))}
@@ -291,11 +355,12 @@ function ViewAll({ project, onPick, onClose }: { project: ProjectT; onPick: (i: 
 
 function NarrowProject({ project }: { project: ProjectT }) {
   const { next } = neighbours(project.slug);
+  const nextHref = useNextHref(next);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   return (
     <div className="narrow-project">
       <TitleBlock project={project} />
-      <p className="narrow-credit soft">{creditLine(project)}</p>
+      <p className="narrow-credit soft"><CreditLine project={project} /></p>
       <ol className="narrow-list">
         {project.media.map((m, i) => (
           <Reveal as="li" key={m.src}>
@@ -310,7 +375,9 @@ function NarrowProject({ project }: { project: ProjectT }) {
                   <Video media={m} active={activeVideo === m.src} />
                 </motion.div>
               ) : (
-                <Img src={m.src} alt={m.alt} sizes="100vw" priority={i === 0} />
+                <span className="narrow-img" style={{ "--ratio": m.width / m.height } as CSSProperties}>
+                  <Img src={m.src} alt={m.alt} sizes="100vw" priority={i === 0} />
+                </span>
               )}
               <figcaption className="small soft">{pad(i + 1)} / {pad(project.media.length)}</figcaption>
             </figure>
@@ -320,7 +387,51 @@ function NarrowProject({ project }: { project: ProjectT }) {
       <div className="narrow-facts">
         <ProjectFacts project={project} />
       </div>
-      <Link to={`/work/${next.slug}`} className="narrow-next">
+      <Link to={nextHref} className="narrow-next">
+        <span className="small soft">next project</span>
+        <span className="serif">{next.title} →</span>
+      </Link>
+      <Footer />
+    </div>
+  );
+}
+
+/* ---------------- Video projects: embedded YouTube player first ---------------- */
+
+/** Privacy-friendly YouTube embed (youtube-nocookie), playing on this site. */
+function YouTube({ id, title }: { id: string; title: string }) {
+  const src = `https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&playsinline=1`;
+  return (
+    <div className="yt-frame">
+      <iframe
+        src={src}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      />
+    </div>
+  );
+}
+
+/** The player at full content width, then the title and one short credit line. */
+function VideoProject({ project }: { project: ProjectT }) {
+  const { next } = neighbours(project.slug);
+  const nextHref = useNextHref(next);
+  return (
+    <div className="video-project">
+      <p className="small soft video-back">
+        <BackLink project={project} /> — {project.year}
+      </p>
+      <YouTube id={project.youtubeId!} title={project.title} />
+      <div className="video-text">
+        <h1 className="serif video-title">{project.title}</h1>
+        <p className="small soft video-credit"><CreditLine project={project} /></p>
+        <div className="video-facts">
+          <ProjectFacts project={project} />
+        </div>
+      </div>
+      <Link to={nextHref} className="narrow-next">
         <span className="small soft">next project</span>
         <span className="serif">{next.title} →</span>
       </Link>

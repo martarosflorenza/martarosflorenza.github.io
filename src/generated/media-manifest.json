@@ -155,17 +155,38 @@
   ],
   "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JZQC7ACHfw5RUZYAA/uvhfyaOQLiMjvqyLo4HW8c1IB7muoAAAA=="
  },
- "/assets/cocacola/cocacola-01.mp4": {
-  "type": "video",
-  "posterBase": "/img/cocacola/cocacola-01-poster",
-  "width": 1424,
-  "height": 656,
+ "/assets/covers/adidas-backyard-legends-cover.jpg": {
+  "type": "image",
+  "base": "/img/covers/adidas-backyard-legends-cover",
+  "width": 576,
+  "height": 720,
   "widths": [
    480,
-   960,
-   1424
+   576
   ],
-  "lqip": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoQAAcAA4BaJYwCdAC9L9KHRAD+750oO/C3N1XDWvXN+1ZiRSroNXAWAAA="
+  "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdABJmo0HwMx/eBLG2APulez3a3H7iHsPhxtlshSDFvIeSUj0FUZv64aEDzW4TAyeNiAteJrGRBD+QOOJImuxxHY0C2Sf7xiWPpMEVAAAA"
+ },
+ "/assets/covers/coca-cola-holiday-memory-cover.jpg": {
+  "type": "image",
+  "base": "/img/covers/coca-cola-holiday-memory-cover",
+  "width": 576,
+  "height": 720,
+  "widths": [
+   480,
+   576
+  ],
+  "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoQABQAPu1iqU2ppaQiMAgBMB2JYgC7ABeqyuR6kuFxcYAA+pPKjseZ5IeuMj6w1mnfcD/fulNj8QsrE5rF1zOIUB31VycPSZdkGrELfgA="
+ },
+ "/assets/covers/pellizco-cover.jpg": {
+  "type": "image",
+  "base": "/img/covers/pellizco-cover",
+  "width": 720,
+  "height": 332,
+  "widths": [
+   480,
+   720
+  ],
+  "lqip": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoQAAcAA4BaJaQAAudVfd8oAP74Z5LLC6M8hGEQRJb8AAAA"
  },
  "/assets/ecom-casablanca/ecom-casablanca-01.webp": {
   "type": "image",
@@ -1996,17 +2017,6 @@
   ],
   "lqip": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoQAAsAA4BaJYwCdADdG34HzOAAyW34+GShKP68aWCGQrTGsu2awEsISiFHfTgP4uBccAAA"
  },
- "/assets/vicaclip/vicaclip-01.mp4": {
-  "type": "video",
-  "posterBase": "/img/vicaclip/vicaclip-01-poster",
-  "width": 720,
-  "height": 332,
-  "widths": [
-   480,
-   720
-  ],
-  "lqip": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoQAAcAA4BaJaQAAudi84eoAAD++GeSywujPIPYjanV8QAA"
- },
  "/assets/warm/warm-01.mp4": {
   "type": "video",
   "posterBase": "/img/warm/warm-01-poster",
@@ -2050,17 +2060,5 @@
    650
   ],
   "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBACdASoQACAAPu1kqk4ppaQiMAgBMB2JQBYdg8HPmQY52kG0VxtwvQfgAP7qf5UuPh+C2IAM8/huoC1f5DL2lppYBwRhkGyd/Y2uNYxP2EccwzwMrv/WabhTut0acrwCt6g7NjlENTgEpVQ8kVQFkAA="
- },
- "/assets/world-cup/world-cup-01.mp4": {
-  "type": "video",
-  "posterBase": "/img/world-cup/world-cup-01-poster",
-  "width": 1024,
-  "height": 470,
-  "widths": [
-   480,
-   960,
-   1024
-  ],
-  "lqip": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAcAA4BaJaQAA3AA/vW+EduvNAAA"
  }
 }

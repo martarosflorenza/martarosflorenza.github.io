@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
-import { categoryLabel, coverOf, pad, profile, projects, type Project } from "../content";
+import { categoryLabel, coverOf, isHorizontalVideo, pad, profile, type Project, projects } from "../content";
 import { Page } from "../components/PageTransition";
 import { Img } from "../components/Img";
 import { Reveal } from "../components/Reveal";
@@ -71,7 +71,7 @@ function ProjectIndex() {
                 onFocus={() => setHovered(null)}
               >
                 <span className="index-num small soft">{pad(i + 1)}</span>
-                <span className="index-thumb" aria-hidden="true">
+                <span className={isHorizontalVideo(p) ? "index-thumb is-video" : "index-thumb"} aria-hidden="true">
                   <Img src={cover.src} alt="" sizes="64px" className="fill" />
                 </span>
                 <span className="index-title serif">{p.title}</span>
@@ -89,7 +89,7 @@ function ProjectIndex() {
           {hovered && (
             <motion.div
               key={hovered.slug}
-              className="index-preview-card"
+              className={isHorizontalVideo(hovered) ? "index-preview-card is-video" : "index-preview-card"}
               initial={{ opacity: 0, rotate: reduce ? 0 : -3, scale: 0.96 }}
               animate={{ opacity: 1, rotate: reduce ? 0 : -1.5, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}

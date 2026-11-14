@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { categories, categoryLabel, categoryPath, coverOf, pad, profile, projects } from "../content";
+import { categories, categoryLabel, categoryPath, coverOf, isHorizontalVideo, pad, profile, projects } from "../content";
 import { Page } from "../components/PageTransition";
 import { Img } from "../components/Img";
 import { Reveal } from "../components/Reveal";
@@ -44,10 +44,14 @@ export function Work({ category }: { category?: string }) {
           >
             {shown.map((p, i) => {
               const cover = coverOf(p);
+              const video = isHorizontalVideo(p);
               return (
                 <Reveal as="li" key={p.slug} className="work-item" delay={(i % 3) * 0.08}>
                   <Link to={`/work/${p.slug}?from=${category ?? "all"}`} className="work-card">
-                    <span className="work-card-img" style={{ "--ratio": cover.width / cover.height } as CSSProperties}>
+                    <span
+                      className={video ? "work-card-img is-video" : "work-card-img"}
+                      style={{ "--ratio": video ? 16 / 9 : cover.width / cover.height } as CSSProperties}
+                    >
                       <Img src={cover.src} alt="" sizes="(min-width: 900px) 33vw, 50vw" />
                     </span>
                     <span className="work-card-meta">

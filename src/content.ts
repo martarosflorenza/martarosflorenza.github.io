@@ -58,6 +58,9 @@ export type Profile = {
   /** Artwork shown on the info page (optional). */
   infoArtwork?: { src: string; width: number; height: number; alt: string };
   homeCover: { src: string; width: number; height: number; alt: string; title: string; credits: Credit[] };
+  /** Magazines Marta has worked for (info page). */
+  magazines?: string[];
+  /** Brands and clients (info page). */
   clients: string[];
   seo: { title: string; description: string };
   settings: { showCredits: boolean };
@@ -158,6 +161,16 @@ export function neighbours(slug: string) {
 export function coverOf(p: Project): MediaItem {
   if (p.cover) return normalizeMedia({ src: p.cover, type: "image", alt: p.title }, p.title, 0);
   return p.media.find((m) => m.type === "image") ?? p.media[0];
+}
+
+/**
+ * Video projects (YouTube, or a landscape film) are always shown horizontal (16:9) in lists.
+ * Vertical clips such as social-media videos keep their own shape.
+ */
+export function isHorizontalVideo(p: Project) {
+  if (p.youtubeId) return true;
+  const cover = coverOf(p);
+  return cover.type === "video" && cover.width > cover.height;
 }
 
 /** The short line under the images: the "caption" if set, otherwise role · note · credits. */

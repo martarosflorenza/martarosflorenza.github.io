@@ -30,15 +30,22 @@ export function Info() {
             </ul>
           </Reveal>
 
+          {profile.magazines && profile.magazines.length > 0 && (
+            <Reveal className="info-block info-clients">
+              <h2 className="small soft">magazines</h2>
+              <p>{profile.magazines.join(", ")}</p>
+            </Reveal>
+          )}
+
           <Reveal className="info-block info-clients">
-            <h2 className="small soft">selected clients</h2>
-            <p className="serif">{profile.clients.join(", ")}.</p>
+            <h2 className="small soft">clients</h2>
+            <p>{profile.clients.join(", ")}</p>
           </Reveal>
         </div>
 
         {profile.infoArtwork && (
           <Reveal className="info-artwork">
-            <Img src={profile.infoArtwork.src} alt={profile.infoArtwork.alt} sizes="(min-width: 900px) 40vw, 100vw" />
+            <Img src={profile.infoArtwork.src} alt={profile.infoArtwork.alt} sizes="(min-width: 900px) 24vw, 60vw" />
           </Reveal>
         )}
       </div>

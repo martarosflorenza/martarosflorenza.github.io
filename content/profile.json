@@ -33,12 +33,14 @@
       }
     ]
   },
-  "clients": [
+  "magazines": [
     "Vanguard Magazine",
     "Lula Japan",
     "Sicky Magazine",
     "Schön!",
-    "Fucking Young",
+    "Fucking Young"
+  ],
+  "clients": [
     "Loewe",
     "Adidas",
     "Casablanca",

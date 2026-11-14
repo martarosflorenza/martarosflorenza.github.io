@@ -39,7 +39,7 @@ Edit `content/profile.json`:
 
 - `"bio"` — the text on the info page. The first sentence is shown large, the rest smaller.
 - `"contact"` — `"email"`, `"phone"`, `"instagram"` (the Instagram name without `@`).
-- `"clients"` — the "selected clients" list: `["Loewe", "Adidas", "Coca-Cola"]`.
+- `"magazines"` and `"clients"` — the two lists on the info page, e.g. `["Loewe", "Adidas", "Coca-Cola"]`.
 - `"seo"` — the title and description shown by Google and when the link is shared.
 
 ## Change a project's text
@@ -101,8 +101,9 @@ A project can show a YouTube video (played on the site, not sent to YouTube) ins
 ```
 
 `youtubeId` is the part after `watch?v=` in the YouTube address. `cover` is the still image
-shown in the grids; covers live in `public/assets/covers/` and are best at **4:5 portrait,
-1600 × 2000 px**. To change a cover, upload a new file with the same name.
+shown in the lists; covers live in `public/assets/covers/` and should be a frame of the video,
+**horizontal 16:9, 1920 × 1080 px**. Video projects are always shown at 16:9 in the lists.
+To change a cover, upload a new file with the same name.
 
 ## Add a new project
 

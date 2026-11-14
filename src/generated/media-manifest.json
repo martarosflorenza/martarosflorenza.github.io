@@ -158,35 +158,38 @@
  "/assets/covers/adidas-backyard-legends-cover.jpg": {
   "type": "image",
   "base": "/img/covers/adidas-backyard-legends-cover",
-  "width": 576,
+  "width": 1280,
   "height": 720,
   "widths": [
    480,
-   576
+   960,
+   1280
   ],
-  "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdABJmo0HwMx/eBLG2APulez3a3H7iHsPhxtlshSDFvIeSUj0FUZv64aEDzW4TAyeNiAteJrGRBD+QOOJImuxxHY0C2Sf7xiWPpMEVAAAA"
+  "lqip": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoQAAkAA4BaJQBOgBdc6L9kAP6FyayUjgEn7DPt2CNyvP9MKfJW5IdQO7mx8gLN51bo/TwAAAA="
  },
  "/assets/covers/coca-cola-holiday-memory-cover.jpg": {
   "type": "image",
   "base": "/img/covers/coca-cola-holiday-memory-cover",
-  "width": 576,
+  "width": 1280,
   "height": 720,
   "widths": [
    480,
-   576
+   960,
+   1280
   ],
-  "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoQABQAPu1iqU2ppaQiMAgBMB2JYgC7ABeqyuR6kuFxcYAA+pPKjseZ5IeuMj6w1mnfcD/fulNj8QsrE5rF1zOIUB31VycPSZdkGrELfgA="
+  "lqip": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoQAAkAA4BaJQBOgCLHYD2IWgAA/ua8Uf6iu7EP6UJGM3Tjdy98WBRvpZA9erXgAAA="
  },
  "/assets/covers/pellizco-cover.jpg": {
   "type": "image",
   "base": "/img/covers/pellizco-cover",
-  "width": 720,
-  "height": 332,
+  "width": 1280,
+  "height": 720,
   "widths": [
    480,
-   720
+   960,
+   1280
   ],
-  "lqip": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoQAAcAA4BaJaQAAudVfd8oAP74Z5LLC6M8hGEQRJb8AAAA"
+  "lqip": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoQAAkAA4BaJQBOgBTsY5IAAP6ogWtzb7m112dNN/Bd0nXt086kqzL3dwAAAA=="
  },
  "/assets/ecom-casablanca/ecom-casablanca-01.webp": {
   "type": "image",

@@ -1,27 +1,27 @@
 .info { padding-top: calc(var(--header-h) + 8vh); padding-bottom: 12vh; row-gap: 48px; position: relative; }
 .info-text { grid-column: 1 / span 12; display: grid; gap: 28px; position: relative; z-index: 1; }
-.info-lead { font-size: clamp(28px, 7.4vw, 34px); line-height: 1.12; max-width: 22ch; text-wrap: balance; }
-.info-body { font-size: 15px; line-height: 1.6; max-width: 46ch; padding-left: 12%; }
+.info-lead { font-size: 18px; line-height: 1.3; max-width: 30ch; text-wrap: balance; }
+.info-body { font-size: 13px; line-height: 1.6; max-width: 46ch; padding-left: 12%; }
 .info-block { display: grid; gap: 8px; }
 .info-block h2 { font-weight: 400; letter-spacing: 0.06em; }
-.info-contact { display: grid; gap: 4px; font-size: 15px; }
+.info-contact { display: grid; gap: 2px; font-size: 13px; }
 .info-contact li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
 .copy-btn { letter-spacing: 0.04em; }
 .copy-btn:hover { color: var(--ink); }
-.info-clients p { font-size: 22px; line-height: 1.25; max-width: 30ch; }
-.info-artwork { grid-column: 1 / span 12; }
+.info-clients p { font-size: 13px; line-height: 1.6; max-width: 40ch; }
+.info-artwork { grid-column: 1 / span 12; width: 60%; max-width: 320px; }
 /* Shown in black and white; remove this filter to bring the colour back. */
 .info-artwork picture, .info-artwork img { filter: grayscale(1); }
 
 @media (min-width: 900px) {
   .info { padding-top: calc(var(--header-h) + 12vh); }
-  /* Text on the left, the artwork holding the right half. */
-  .info-text { grid-column: 1 / span 6; gap: 40px; }
-  .info-lead { font-size: clamp(34px, 3vw, 48px); }
+  /* Text on the left, a small artwork on the right. */
+  .info-text { grid-column: 1 / span 6; gap: 32px; }
+  .info-lead { font-size: clamp(20px, 1.6vw, 24px); }
   .info-body { padding-left: 28%; }
   .info-block { padding-left: 28%; }
   .info-artwork {
     position: sticky; top: calc(var(--header-h) + 4vh); align-self: start;
-    grid-column: 8 / span 5;
+    grid-column: 9 / span 3; width: auto; max-width: none;
   }
 }

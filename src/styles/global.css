@@ -102,7 +102,7 @@ picture { display: block; }
   display: flex; align-items: center; justify-content: space-between;
   padding-inline: var(--margin);
   pointer-events: none;
-  background: linear-gradient(var(--paper) 72%, rgba(255, 255, 255, 0));
+  background: none; /* Transparent: the name and menu float over the page while scrolling. */
 }
 .site-header > * { pointer-events: auto; }
 .wordmark { font-size: 16px; font-weight: 600; line-height: 1; letter-spacing: -0.01em; }

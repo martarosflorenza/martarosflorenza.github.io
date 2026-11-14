@@ -10,9 +10,9 @@ The portfolio website of Marta Ros Florenza, fashion stylist (Paris & Barcelona)
 # Part 1 — Editing the website (no installation needed)
 
 Everything on the site comes from a few files in this repository. You edit them directly on
-**github.com** in your browser. When the site is connected to Vercel (see
+**github.com** in your browser. Once the site is online with one of the automatic hosts (see
 [Putting the site online](#putting-the-site-online)), every change you save goes live by itself
-in about two minutes.
+in a few minutes.
 
 ## Where things are
 
@@ -117,20 +117,50 @@ also work on it — it is a standard React project (see Part 2).
 
 # Putting the site online
 
-The site is a static website; the free plan of [Vercel](https://vercel.com) is enough.
+Two separate things are needed:
 
-1. Sign up at vercel.com with **Continue with GitHub** (use Marta's GitHub account).
-2. Click **Add New… → Project**, pick this repository, click **Import**.
-3. Leave all settings as they are (they are read from `vercel.json`) and click **Deploy**.
+- **A domain** — the address, e.g. `martarosflorenza.com`. Bought from any domain company
+  (Namecheap, OVH, GoDaddy, Google/Squarespace Domains, IONOS…), usually ~10–20 €/year.
+- **A host** — the service that serves the website at that address. The site is "static"
+  (just files), so free hosts work perfectly. The domain and the host do not have to be the
+  same company: any host below can be connected to a domain bought anywhere.
 
-After a few minutes the site is live at an address like `marta-ros-florenza.vercel.app`.
-From then on, every change committed on GitHub is published automatically.
+Choose one host. With the first three, every change saved on GitHub goes live by itself.
 
-**Own domain** (for example `martarosflorenza.com`): in the Vercel project open
-**Settings → Domains**, add the domain and follow the instructions shown there.
+| Host | Cost | Updates itself after edits | Notes |
+| --- | --- | --- | --- |
+| **GitHub Pages** | free | yes | Everything stays in GitHub. The repository must be public (free plan). |
+| **Netlify** or **Cloudflare Pages** | free | yes | Repository can be private. One more account. |
+| **Vercel** | free | yes | Same as Netlify. |
+| The domain company's own hosting | paid | **no** | Each change must be rebuilt on a computer and uploaded by FTP. |
 
-Other hosts work too (Netlify, Cloudflare Pages): build command `npm run build`, output folder
-`dist`. A `public/_redirects` file for Netlify is already included.
+### Option 1 — GitHub Pages
+
+1. In the repository: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. **Settings → Secrets and variables → Actions → Variables → New repository variable**:
+   name `DEPLOY_TO_PAGES`, value `true`.
+3. **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**. After a few minutes the
+   site is published (and again after every change).
+4. Connect the domain: **Settings → Pages → Custom domain**, type the domain, **Save**, then add
+   the DNS records GitHub shows at the domain company, and tick **Enforce HTTPS** when it
+   becomes available.
+
+   Use the custom domain: without one, GitHub Pages puts the site under
+   `…github.io/marta-portfolio/`, a sub-folder this site is not set up for.
+
+### Option 2 — Netlify, Cloudflare Pages or Vercel
+
+1. Sign up with **Continue with GitHub** and import this repository.
+2. Build command `npm run build`, output folder `dist` (Vercel reads them from `vercel.json`;
+   Netlify picks up `public/_redirects` automatically).
+3. Add the domain in the host's **Domains** settings and follow its DNS instructions.
+
+### Option 3 — The domain company's hosting (FTP)
+
+Someone with Node.js installed runs `npm install` and `npm run build`, then uploads the
+**contents** of the `dist/` folder to the hosting's web folder (often `public_html`). The
+included `.htaccess` file makes page addresses like `/work/vanguard` work on these servers.
+Repeat after every change.
 
 ---
 

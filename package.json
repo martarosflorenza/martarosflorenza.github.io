@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/optimize-media.mjs && vite",
-    "build": "node scripts/optimize-media.mjs && tsc -b && vite build",
+    "build": "node scripts/optimize-media.mjs && tsc -b && vite build && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
     "preview": "vite preview",
     "media": "node scripts/optimize-media.mjs",
     "typecheck": "tsc -b",

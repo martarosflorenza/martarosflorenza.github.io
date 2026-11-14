@@ -1,0 +1,5 @@
+# Send every page address (e.g. /work/vanguard) to the app; real files are served as-is.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

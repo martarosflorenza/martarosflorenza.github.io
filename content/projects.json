@@ -1,5 +1,5 @@
 {
-  "_help": "Edit text freely. 'credits' is a list of {role, name}; set showCredits in profile.json to hide them all. Media 'src' points to files in public/assets.",
+  "_help": "See README.md, 'Add a new project'. Media items need only a src, e.g. { \"src\": \"/assets/new-shoot/photo-01.jpg\" }. The order here is the order on the site.",
   "categories": [
     {
       "slug": "editorial",

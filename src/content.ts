@@ -54,10 +54,48 @@ export type ManifestEntry = {
   lqip: string;
 };
 
+export const manifest = manifestData as Record<string, ManifestEntry>;
 export const profile = profileData as Profile;
 export const categories = projectsData.categories as Category[];
-export const projects = projectsData.projects as Project[];
-export const manifest = manifestData as Record<string, ManifestEntry>;
+
+// ---------- Forgiving content ----------
+// The JSON files are edited by hand, so most fields are optional. A media item can be
+// as short as { "src": "/assets/my-shoot/photo-01.jpg" }: its type comes from the file
+// extension and its size from the processed media, so nobody has to type pixel sizes.
+
+const VIDEO_EXT = /\.(mp4|mov|webm|m4v)$/i;
+
+type RawMedia = Partial<MediaItem> & { src: string };
+type RawProject = Partial<Omit<Project, "media">> & { slug: string; title: string; media?: (RawMedia | string)[] };
+
+function normalizeMedia(raw: RawMedia | string, title: string, index: number): MediaItem {
+  const item: RawMedia = typeof raw === "string" ? { src: raw } : raw;
+  const type = item.type ?? (VIDEO_EXT.test(item.src) ? "video" : "image");
+  const known = manifest[item.src];
+  // Fallback ratios only matter if a file could not be processed.
+  const width = item.width ?? known?.width ?? (type === "video" ? 1920 : 1200);
+  const height = item.height ?? known?.height ?? (type === "video" ? 1080 : 1500);
+  return { type, src: item.src, width, height, alt: item.alt || `${title}, ${type} ${index + 1}`, duration: item.duration };
+}
+
+function normalizeProject(raw: RawProject): Project {
+  return {
+    slug: raw.slug,
+    category: raw.category ?? categories[0]?.slug ?? "",
+    title: raw.title,
+    client: raw.client ?? null,
+    year: raw.year ?? null,
+    role: raw.role ?? null,
+    description: raw.description ?? "",
+    credits: raw.credits ?? [],
+    media: (raw.media ?? []).map((m, i) => normalizeMedia(m, raw.title, i)),
+  };
+}
+
+/** Projects in the order they appear in projects.json. Projects without media are skipped. */
+export const projects = (projectsData.projects as RawProject[])
+  .map(normalizeProject)
+  .filter((p) => p.media.length > 0);
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
 

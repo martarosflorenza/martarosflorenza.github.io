@@ -36,7 +36,8 @@ export function Video({ media, active, className }: { media: MediaItem; active: 
         loop={isShort}
         playsInline
         controls={!isShort}
-        preload={active ? "auto" : "none"}
+        // Without a poster, load just enough to show the first frame.
+        preload={active ? "auto" : poster ? "none" : "metadata"}
         aria-label={media.alt}
         style={{ width: "100%", height: "100%", objectFit: "contain", background: "var(--paper-deep)" }}
       />

@@ -1,0 +1,8 @@
+# Netlify settings, so importing the repository needs no manual configuration.
+# "npm run build" also processes new photos before building the site.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"

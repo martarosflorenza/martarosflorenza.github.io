@@ -186,8 +186,9 @@ Choose one host. With the first three, every change saved on GitHub goes live by
 ### Option 2 — Netlify, Cloudflare Pages or Vercel
 
 1. Sign up with **Continue with GitHub** and import this repository.
-2. Build command `npm run build`, output folder `dist` (Vercel reads them from `vercel.json`;
-   Netlify picks up `public/_redirects` automatically).
+2. Build command `npm run build`, output folder `dist`. Netlify and Vercel read these from
+   `netlify.toml` and `vercel.json`, so their defaults can be left as they are. On Cloudflare
+   Pages, type them in.
 3. Add the domain in the host's **Domains** settings and follow its DNS instructions.
 
 ### Option 3 — The domain company's hosting (FTP)

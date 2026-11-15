@@ -1,5 +1,6 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { profile } from "../content";
+import { getWorkPath } from "../lib/scrollMemory";
 
 const NAV = [
   { to: "/", label: "home" },
@@ -18,11 +19,13 @@ export function Header() {
         <ul className="site-nav">
           {NAV.map((item) => {
             const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
+            // "work" reopens the category the visitor last viewed (read on every render, i.e. every page change).
+            const to = item.to === "/work" ? getWorkPath() : item.to;
             return (
               <li key={item.to}>
-                <NavLink to={item.to} end={item.to === "/"} aria-current={active ? "page" : undefined}>
+                <Link to={to} aria-current={active ? "page" : undefined}>
                   <span className="bracket">{item.label}</span>
-                </NavLink>
+                </Link>
               </li>
             );
           })}

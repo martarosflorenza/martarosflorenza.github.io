@@ -3,6 +3,7 @@
 // lands where the visitor left off.
 import { useEffect, useLayoutEffect, useMemo, useRef } from "react";
 import { useLocation, useNavigationType } from "react-router-dom";
+import { categoryPath, isCategory } from "../content";
 
 const storageKey = (path: string) => `scroll:${path}`;
 
@@ -17,6 +18,9 @@ export function trackPath(path: string) {
   if (path === currentPath) return;
   previousPath = currentPath;
   currentPath = path;
+  // Remember the Work overview right away, before the header renders its "work" link.
+  const [, first, second, extra] = path.split("?")[0].split("/");
+  if (first === "work" && extra === undefined && (!second || isCategory(second))) rememberWorkPath(categoryPath(second));
 }
 
 /** The address the visitor was on just before the current one (inside this site). */
@@ -101,4 +105,31 @@ export function useListingScroll(path: string) {
       restoring.current = false;
     };
   }, [target]);
+}
+
+// ---------- Last viewed Work overview ----------
+// The "work" menu link returns to the category the visitor last looked at ("all" or one category).
+
+const LAST_WORK_KEY = "work:last";
+let lastWorkPath = "/work";
+
+/** Called by the Work page whenever its overview ("all" or a category) is shown. */
+export function rememberWorkPath(path: string) {
+  lastWorkPath = path;
+  try {
+    sessionStorage.setItem(LAST_WORK_KEY, path);
+  } catch {
+    // Storage unavailable: the in-memory value still works for this visit.
+  }
+}
+
+/** The Work overview to open from the menu: the last one viewed in this visit, else "all". */
+export function getWorkPath() {
+  try {
+    const saved = sessionStorage.getItem(LAST_WORK_KEY);
+    if (saved && /^\/work(\/[a-z0-9-]+)?$/.test(saved)) return saved;
+  } catch {
+    // Fall back to the in-memory value.
+  }
+  return lastWorkPath;
 }

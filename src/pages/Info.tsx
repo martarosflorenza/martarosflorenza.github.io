@@ -30,17 +30,20 @@ export function Info() {
             </ul>
           </Reveal>
 
-          {profile.magazines && profile.magazines.length > 0 && (
-            <Reveal className="info-block info-clients">
-              <h2 className="small soft">magazines</h2>
-              <p>{profile.magazines.join(", ")}</p>
-            </Reveal>
+          {(
+            [
+              ["magazines", profile.magazines],
+              ["clients", profile.clients],
+              ["production agencies", profile.productionAgencies],
+            ] as const
+          ).map(([label, names]) =>
+            names && names.length > 0 ? (
+              <Reveal key={label} className="info-block info-clients">
+                <h2 className="small soft">{label}</h2>
+                <p>{names.join(", ")}</p>
+              </Reveal>
+            ) : null,
           )}
-
-          <Reveal className="info-block info-clients">
-            <h2 className="small soft">clients</h2>
-            <p>{profile.clients.join(", ")}</p>
-          </Reveal>
         </div>
 
         {profile.infoArtwork && (

@@ -19,10 +19,10 @@ export function Home() {
 
         <figure className="hero-cover">
           <Img src={cover.src} alt={cover.alt} sizes="(min-width: 768px) 66vw, 100vw" priority />
-          <figcaption className="small soft hero-caption">
-            <span style={{ fontSize: 13, color: "var(--ink)" }}>{cover.title}</span>
+          <figcaption className="hero-caption">
+            {cover.title}
             {profile.settings.showCredits && cover.credits.map((c) => (
-              <span key={c.name}> — {c.role} {c.name}</span>
+              <span key={c.name} className="hero-caption-by">by {c.name}</span>
             ))}
           </figcaption>
         </figure>

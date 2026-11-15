@@ -857,8 +857,8 @@
     {
       "slug": "pellizco",
       "category": "music",
-      "title": "Pellizco — María Arnal",
-      "artist": "María Arnal",
+      "title": "Pellizco — Maria Arnal",
+      "artist": "Maria Arnal",
       "production": "Canada",
       "year": 2026,
       "role": "Styling Assistant",
@@ -872,7 +872,7 @@
     {
       "slug": "good-news-coffee",
       "category": "commercial",
-      "title": "Good News Coffee",
+      "title": "Good News Coffee Campaign",
       "client": "Good News Coffee",
       "year": 2026,
       "role": "Stylist",
@@ -884,70 +884,70 @@
           "src": "/assets/good-news/good-news-01.jpg",
           "width": 1171,
           "height": 1492,
-          "alt": "Good News Coffee, image 1 of 10"
+          "alt": "Good News Coffee Campaign, image 1 of 10"
         },
         {
           "type": "image",
           "src": "/assets/good-news/good-news-02.jpg",
           "width": 1199,
           "height": 1496,
-          "alt": "Good News Coffee, image 2 of 10"
+          "alt": "Good News Coffee Campaign, image 2 of 10"
         },
         {
           "type": "image",
           "src": "/assets/good-news/good-news-03.jpg",
           "width": 1192,
           "height": 1490,
-          "alt": "Good News Coffee, image 3 of 10"
+          "alt": "Good News Coffee Campaign, image 3 of 10"
         },
         {
           "type": "image",
           "src": "/assets/good-news/good-news-04.jpg",
           "width": 1206,
           "height": 1582,
-          "alt": "Good News Coffee, image 4 of 10"
+          "alt": "Good News Coffee Campaign, image 4 of 10"
         },
         {
           "type": "image",
           "src": "/assets/good-news/good-news-05.jpg",
           "width": 1206,
           "height": 1590,
-          "alt": "Good News Coffee, image 5 of 10"
+          "alt": "Good News Coffee Campaign, image 5 of 10"
         },
         {
           "type": "image",
           "src": "/assets/good-news/good-news-06.jpg",
           "width": 1177,
           "height": 1590,
-          "alt": "Good News Coffee, image 6 of 10"
+          "alt": "Good News Coffee Campaign, image 6 of 10"
         },
         {
           "type": "image",
           "src": "/assets/good-news/good-news-07.jpg",
           "width": 1206,
           "height": 1654,
-          "alt": "Good News Coffee, image 7 of 10"
+          "alt": "Good News Coffee Campaign, image 7 of 10"
         },
         {
           "type": "image",
           "src": "/assets/good-news/good-news-08.jpg",
           "width": 1206,
           "height": 1487,
-          "alt": "Good News Coffee, image 8 of 10"
+          "alt": "Good News Coffee Campaign, image 8 of 10"
         },
         {
           "type": "image",
           "src": "/assets/good-news/good-news-09.jpg",
           "width": 3830,
           "height": 5106,
-          "alt": "Good News Coffee, image 9 of 10"
+          "alt": "Good News Coffee Campaign, image 9 of 10"
         },
         {
           "type": "image",
           "src": "/assets/good-news/good-news-10.jpg",
           "width": 2631,
           "height": 3508,
-          "alt": "Good News Coffee, image 10 of 10"
+          "alt": "Good News Coffee Campaign, image 10 of 10"
         }
       ]
     },

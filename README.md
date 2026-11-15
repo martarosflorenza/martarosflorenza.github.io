@@ -39,7 +39,7 @@ Edit `content/profile.json`:
 
 - `"bio"` — the text on the info page. The first sentence is shown large, the rest smaller.
 - `"contact"` — `"email"`, `"phone"`, `"instagram"` (the Instagram name without `@`).
-- `"magazines"` and `"clients"` — the two lists on the info page, e.g. `["Loewe", "Adidas", "Coca-Cola"]`.
+- `"magazines"`, `"clients"` and `"productionAgencies"` — the lists on the info page, e.g. `["Loewe", "Adidas", "Coca-Cola"]`. Leave a list out to hide it.
 - `"seo"` — the title and description shown by Google and when the link is shared.
 
 ## Change a project's text

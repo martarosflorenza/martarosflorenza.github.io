@@ -62,6 +62,8 @@ export type Profile = {
   magazines?: string[];
   /** Brands and clients (info page). */
   clients: string[];
+  /** Production agencies (info page). */
+  productionAgencies?: string[];
   seo: { title: string; description: string };
   settings: { showCredits: boolean };
 };

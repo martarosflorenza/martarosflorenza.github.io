@@ -23,7 +23,8 @@ export function Work({ category }: { category?: string }) {
     <Page title={title}>
       <div className="work">
         <div className="work-head grid">
-          <h1 className="serif work-title">Work</h1>
+          {/* No visible heading: the category links lead. The heading stays for screen readers. */}
+          <h1 className="sr-only">{category ? `${categoryLabel(category)} work` : "Work"}</h1>
           <nav className="work-filters" aria-label="Project categories">
             {filters.map((f) => (
               <NavLink key={f.label} to={categoryPath(f.slug)} end className="work-filter">

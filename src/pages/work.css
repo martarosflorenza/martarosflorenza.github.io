@@ -1,7 +1,6 @@
-.work { padding-top: calc(var(--header-h) + 6vh); padding-bottom: 14vh; }
+.work { padding-top: calc(var(--header-h) + 2vh); padding-bottom: 14vh; }
 .work-head { row-gap: 18px; align-items: end; margin-bottom: 6vh; }
-.work-title { grid-column: 1 / span 12; font-size: 28px; line-height: 1.05; }
-.work-filters { grid-column: 1 / span 12; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12px; letter-spacing: 0.06em; }
+.work-filters { grid-column: 1 / span 12; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; font-size: 12px; letter-spacing: 0.06em; }
 .work-filter { position: relative; color: var(--ink-soft); padding-block: 6px; transition: color 0.3s; }
 .work-filter[aria-current="page"], .work-filter:hover { color: var(--ink); }
 .work-filter .count { color: var(--ink-faint); }
@@ -24,9 +23,8 @@
 .work-card-title { font-size: 20px; line-height: 1.1; }
 
 @media (min-width: 900px) {
-  .work-head { margin-bottom: 10vh; }
-  .work-title { grid-column: 1 / span 6; font-size: clamp(28px, 2.4vw, 40px); }
-  .work-filters { grid-column: 7 / span 6; justify-content: flex-end; gap: 6px 28px; font-size: 13px; }
+  .work-head { margin-bottom: 7vh; }
+  .work-filters { grid-column: 1 / span 12; justify-content: center; gap: 6px 28px; font-size: 13px; }
   .work-grid { row-gap: 9vh; }
   .work-item:nth-child(even) { margin-top: 0; }
   /* A strict 12-column grid with a repeating, deliberately uneven rhythm. */

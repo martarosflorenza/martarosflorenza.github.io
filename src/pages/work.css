@@ -14,7 +14,8 @@
 .work-card-img { display: block; overflow: hidden; background: var(--paper-deep); }
 /* Tall portraits never dominate: a cover is at most --max-h tall, narrowing to keep its ratio. */
 .work-card { --max-h: min(52vh, 460px); }
-.work-card-img { width: min(100%, calc(var(--max-h) * var(--ratio, 0.8))); }
+.work-card-img { width: min(100%, calc(var(--max-h) * var(--ratio, 0.8))); aspect-ratio: var(--ratio, 0.8); }
+.work-card-img picture, .work-card-img .img { width: 100%; height: 100%; object-fit: cover; }
 /* Video projects are always shown horizontal, at 16:9. */
 .work-card-img.is-video { aspect-ratio: 16 / 9; }
 .work-card-img.is-video picture, .work-card-img.is-video .img { width: 100%; height: 100%; object-fit: cover; }

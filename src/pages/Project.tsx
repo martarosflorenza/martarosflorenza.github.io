@@ -8,7 +8,7 @@ import { Video } from "../components/Video";
 import { Reveal } from "../components/Reveal";
 import { Footer } from "../components/Footer";
 import { useMediaQuery, useViewport } from "../lib/hooks";
-import { getPreviousPath, RESTORE_STATE } from "../lib/scrollMemory";
+import { getPreviousPath } from "../lib/scrollMemory";
 import { NotFound } from "./NotFound";
 import "./project.css";
 
@@ -54,7 +54,6 @@ function BackLink({ project }: { project: ProjectT }) {
   return (
     <Link
       to={to}
-      state={RESTORE_STATE}
       className="back-link link-line"
       onClick={(e) => {
         if (getPreviousPath() === to) {

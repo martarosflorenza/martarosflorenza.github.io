@@ -1,8 +1,7 @@
 // Remembers the scroll position of overview pages (/work and /work/<category>) so that
 // returning from a project, with the browser's back button or the on-page back link,
 // lands where the visitor left off.
-import { useEffect, useLayoutEffect, useMemo, useRef } from "react";
-import { useLocation, useNavigationType } from "react-router-dom";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { categoryPath, isCategory } from "../content";
 
 const storageKey = (path: string) => `scroll:${path}`;
@@ -43,20 +42,21 @@ function save(path: string, y: number) {
   }
 }
 
-/** State passed by the back link so the overview restores its position like the browser back button. */
-export const RESTORE_STATE = { restoreScroll: true } as const;
-
 /**
  * Saves the scroll position of an overview page while the visitor scrolls, and restores it
- * when the page is reached by going back (browser back/forward, or the project back link).
- * Restoring waits until the page is tall enough, i.e. until the images have laid out.
+ * whenever the visitor comes back to the overview from another page (browser back, the
+ * project back link or the menu). Switching category inside the overview does not restore:
+ * the visitor stays at the category links they just clicked.
+ * The grid reserves each image's space before it loads, so the page is tall enough at once.
  */
 export function useListingScroll(path: string) {
-  const navigationType = useNavigationType();
-  const location = useLocation();
-  const wantsRestore = navigationType === "POP" || (location.state as { restoreScroll?: boolean } | null)?.restoreScroll === true;
+  const [initialPath] = useState(path);
+  const switched = useRef(false);
+  useEffect(() => {
+    if (path !== initialPath) switched.current = true;
+  }, [path, initialPath]);
   // Read before any scroll event on this visit can overwrite the stored value.
-  const target = useMemo(() => (wantsRestore ? readSaved(path) : null), [path]);
+  const target = useMemo(() => (!switched.current && path === initialPath ? readSaved(path) : null), [path, initialPath]);
   const restoring = useRef(false);
 
   useLayoutEffect(() => {

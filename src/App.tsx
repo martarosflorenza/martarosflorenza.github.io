@@ -9,9 +9,10 @@ import { Work } from "./pages/Work";
 import { Info } from "./pages/Info";
 import { NotFound } from "./pages/NotFound";
 
-/** /work/<name> is a category overview when <name> is a category, otherwise a project. */
+/** /work is the overview of all projects; /work/<name> is a category overview or a project. */
 function WorkOrProject() {
-  const { slug = "" } = useParams();
+  const { slug } = useParams();
+  if (!slug) return <Work />;
   return isCategory(slug) ? <Work category={slug} /> : <Project />;
 }
 
@@ -32,8 +33,9 @@ export function App() {
       <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
         <Routes location={location} key={routeKey(location.pathname)}>
           <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/work/:slug" element={<WorkOrProject />} />
+          {/* One route for /work and /work/<name>, so moving between "all" and a category keeps the
+              same page (only the grid changes) instead of replaying the page transition. */}
+          <Route path="/work/:slug?" element={<WorkOrProject />} />
           <Route path="/info" element={<Info />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

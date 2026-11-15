@@ -19,7 +19,15 @@ export function HashSync() {
   useEffect(() => {
     const target = toHash(location.pathname);
     if (window.location.hash.replace(/^#/, "") !== target) {
-      window.location.hash = target;
+      // pushState changes the address without the browser's jump to the top that assigning
+      // location.hash causes (visible while the old page is still fading out). Going back still
+      // fires "hashchange", which the listener below turns into a route change.
+      const url = target ? `#${target}` : window.location.pathname + window.location.search;
+      try {
+        window.history.pushState(window.history.state, "", url);
+      } catch {
+        window.location.hash = target;
+      }
     }
   }, [location.pathname]);
   useEffect(() => {

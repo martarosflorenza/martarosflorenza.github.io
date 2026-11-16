@@ -1,4 +1,5 @@
 import { profile } from "../content";
+import { PhoneLink } from "./PhoneLink";
 
 export function Footer() {
   const { email, instagram, phone } = profile.contact;
@@ -9,7 +10,7 @@ export function Footer() {
         <ul className="footer-links">
           <li><a className="link-line" href={`mailto:${email}`}>{email}</a></li>
           <li><a className="link-line" href={`https://instagram.com/${instagram}`} target="_blank" rel="noreferrer">@{instagram}</a></li>
-          <li><a className="link-line" href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a></li>
+          <li><PhoneLink phone={phone} /></li>
         </ul>
         <div className="footer-copy">
           <span className="small soft">© {new Date().getFullYear()} {profile.name.toLowerCase()}</span>

@@ -4,6 +4,7 @@ import { Page } from "../components/PageTransition";
 import { Img } from "../components/Img";
 import { Reveal } from "../components/Reveal";
 import { Footer } from "../components/Footer";
+import { PhoneLink } from "../components/PhoneLink";
 import "./info.css";
 
 export function Info() {
@@ -24,9 +25,8 @@ export function Info() {
                 <a className="link-line" href={`mailto:${email}`}>{email}</a>
                 <CopyButton text={email} />
               </li>
-              <li><a className="link-line" href={`https://instagram.com/${instagram}`} target="_blank" rel="noreferrer">instagram @{instagram}</a></li>
-              <li><a className="link-line" href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a></li>
-              <li className="soft">{profile.location.toLowerCase()}</li>
+              <li><a className="link-line" href={`https://instagram.com/${instagram}`} target="_blank" rel="noreferrer">@{instagram}</a></li>
+              <li><PhoneLink phone={phone} /></li>
             </ul>
           </Reveal>
 

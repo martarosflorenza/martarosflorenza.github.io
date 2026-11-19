@@ -24,7 +24,9 @@
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+/* Always reserve the scrollbar's space, so the layout (and the menu) does not shift between
+   pages that scroll and pages that fit the screen, such as a project on desktop. */
+html { -webkit-text-size-adjust: 100%; scrollbar-gutter: stable; }
 body {
   margin: 0;
   background: var(--paper);
